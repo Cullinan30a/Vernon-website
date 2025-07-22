@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卓君風 | 宏利保險區域總監 - 香港退休規劃及跨境保險專家</title>
+    <meta name="description" content="香港宏利保險區域總監，專注強積金優化、跨境財富傳承及家族信託規劃，35年服務1000+香港家庭">
+    <style>
+        :root {
+            --manulife-red: #e2001a;
+            --gold: #d4af37;
+            --dark-blue: #003366;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 香港金融精英头部导航 */
+        header {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+        .manulife-logo {
+            height: 40px;
+            margin-right: 15px;
+        }
+        .title-section h1 {
+            font-size: 1.4rem;
+            color: var(--dark-blue);
+            font-weight: 700;
+        }
+        .title-section p {
+            font-size: 0.9rem;
+            color: var(--manulife-red);
+            font-weight: 600;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        .nav-menu li {
+            margin-left: 25px;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: 600;
+            font-size: 1rem;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--manulife-red);
+            transition: 0.3s;
+        }
+        .nav-menu a:hover:after {
+            width: 100%;
+        }
+        
+        /* 动态身份墙 - 专业资历展示 */
+        .hero-section {
+            background: linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.9)), url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80') center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .credential-wall {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .credential-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 25px;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .credential-card:hover {
+            transform: translateY(-10px);
+        }
+        .credential-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        .credential-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .credential-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* 保险解决方案矩阵 */
+        .solutions-section {
+            padding: 80px 0;
+            background: white;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--dark-blue);
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--manulife-red);
+        }
+        .solution-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .solution-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .solution-header {
+            background: var(--dark-blue);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .solution-body {
+            padding: 25px;
+        }
+        .solution-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        .solution-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+        }
+        .solution-list li:before {
+            content: '✓';
+            color: var(--manulife-red);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .case-study {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        .case-study strong {
+            color: var(--manulife-red);
+        }
+        
+        /* 保险智囊站 - 动态内容引擎 */
+        .knowledge-section {
+            background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 0;
+        }
+        .content-engine {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            gap: 40px;
+        }
+        .policy-updates, .director-column {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            padding: 30px;
+        }
+        .update-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+        .update-header h3 {
+            color: var(--dark-blue);
+            font-size: 1.4rem;
+        }
+        .countdown {
+            background: var(--manulife-red);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .update-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .update-item h4 {
+            color: var(--dark-blue);
+            margin-bottom: 8px;
+        }
+        .update-meta {
+            display: flex;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .update-meta span {
+            margin-right: 15px;
+        }
+        .retention-tools {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .vip-offer {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, #002244 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        .vip-offer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        .btn {
+            display: inline-block;
+            background: var(--manulife-red);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #c00016;
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(226,0,26,0.3);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--manulife-red);
+            color: var(--manulife-red);
+        }
+        .btn-outline:hover {
+            background: var(--manulife-red);
+            color: white;
+        }
+        
+        /* 信任增强系统 */
+        .trust-section {
+            padding: 80px 0;
+            background: white;
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .trust-card {
+            text-align: center;
+            padding: 30px;
+        }
+        .trust-card i {
+            font-size: 3rem;
+            color: var(--manulife-red);
+            margin-bottom: 20px;
+        }
+        .client-map {
+            height: 250px;
+            background: #eef2f7;
+            border-radius: 12px;
+            margin-top: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        .map-point {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--manulife-red);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 0 8px rgba(226, 0, 26, 0.3);
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(226, 0, 26, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(226, 0, 26, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(226, 0, 26, 0); }
+        }
+        
+        /* 转化浮动按钮 */
+        .float-consult {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--manulife-red) 0%, #c00016 100%);
+            color: white;
+            border-radius: 50px;
+            padding: 18px 30px;
+            box-shadow: 0 10px 30px rgba(226,0,26,0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            animation: pulse 2s infinite;
+        }
+        .badge {
+            background: var(--gold);
+            color: var(--dark-blue);
+            border-radius: 20px;
+            padding: 3px 10px;
+            font-size: 0.8rem;
+            margin-left: 15px;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        /* 香港合规页脚 */
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--manulife-red);
+        }
+        .compliance-info {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .content-engine {
+                grid-template-columns: 1fr;
+            }
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-menu {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .nav-menu li {
+                margin: 5px 10px;
+            }
+            .float-consult {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 浮动咨询按钮 -->
+    <a href="#consultation" class="float-consult">
+        <i class="fas fa-calendar-check"></i>
+        免費諮詢
+        <span class="badge">今日剩餘 3 名額</span>
+    </a>
+
+    <!-- 头部导航 -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-section">
+                <img src="https://www.manulife.com.hk/content/dam/insurance/images/global-logos/Manulife-logo.svg" alt="宏利保險" class="manulife-logo">
+                <div class="title-section">
+                    <h1>陳大文 | 區域總監</h1>
+                    <p>退休規劃 • 跨境保險 • 財富傳承專家</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about">關於總監</a></li>
+                <li><a href="#solutions">保險方案</a></li>
+                <li><a href="#knowledge">保險智囊</a></li>
+                <li><a href="#cases">客戶案例</a></li>
+                <li><a href="#contact">聯絡預約</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 动态身份墙 -->
+    <section class="hero-section" id="about">
+        <div class="container">
+            <h2>宏利保險區域總監 | 香港退休規劃專家</h2>
+            <p>十年服務經驗 • 300+香港家庭信任之選</p>
+            
+            <div class="credential-wall">
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>宏利精英獎項</h3>
+                    <p>連續5年Top 10區域總監</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>專業認證</h3>
+                    <p>強積金專家 • 跨境保險認證</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>服務案例</h3>
+                    <p>300+家庭資產規劃</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>客戶留存率</h3>
+                    <p>98% 持續服務率</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 保险解决方案矩阵 -->
+    <section class="solutions-section" id="solutions">
+        <div class="container">
+            <div class="section-title">
+                <h2>專業保險解決方案</h2>
+            </div>
+            
+            <div class="solution-matrix">
+                <div class="solution-card">
+                    <div class="solution-header">
+                        <h3>跨境財富傳承</h3>
+                    </div>
+                    <div class="solution-body">
+                        <ul class="solution-list">
+                            <li>家族信託架構規劃</li>
+                            <li>大灣區資產配置</li>
+                            <li>跨境稅務優化方案</li>
+                            <li>遺產規劃與執行</li>
+                        </ul>
+                        <div class="case-study">
+                            <strong>成功案例：</strong>為九龍塘客戶節省跨境遺產稅37%，資產傳承效率提升2倍
+                        </div>
+                        <a href="#consultation" class="btn">免費規劃諮詢</a>
+                    </div>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-header">
+                        <h3>強積金優化</h3>
+                    </div>
+                    <div class="solution-body">
+                        <ul class="solution-list">
+                            <li>MPF管理費節省方案</li>
+                            <li>退休金組合重組</li>
+                            <li>多帳戶整合服務</li>
+                            <li>退休收入預測模型</li>
+                        </ul>
+                        <div class="case-study">
+                            <strong>成功案例：</strong>為中環客戶優化強積金組合，預計退休金提升23%
+                        </div>
+                        <a href="#consultation" class="btn">免費規劃諮詢</a>
+                    </div>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-header">
+                        <h3>高端醫療保障</h3>
+                    </div>
+                    <div class="solution-body">
+                        <ul class="solution-list">
+                            <li>環球醫療網絡計劃</li>
+                            <li>危疾多重保障方案</li>
+                            <li>跨境醫療服務</li>
+                            <li>長期護理保險</li>
+                        </ul>
+                        <div class="case-study">
+                            <strong>成功案例：</strong>為深圳灣客戶設計跨境醫療方案，節省醫療支出42%
+                        </div>
+                        <a href="#consultation" class="btn">免費規劃諮詢</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 保险智囊站 -->
+    <section class="knowledge-section" id="knowledge">
+        <div class="container">
+            <div class="section-title">
+                <h2>保險智囊站</h2>
+                <p>每月更新香港保險市場洞察</p>
+            </div>
+            
+            <div class="content-engine">
+                <div class="policy-updates">
+                    <div class="update-header">
+                        <h3>最新政策解讀</h3>
+                        <div class="countdown">3天後更新</div>
+                    </div>
+                    
+                    <div class="update-item">
+                        <div class="update-meta">
+                            <span><i class="fas fa-tag"></i> 強積金政策</span>
+                            <span><i class="fas fa-calendar"></i> 2023年11月15日</span>
+                        </div>
+                        <h4>2024強積金供款上限調整解讀</h4>
+                        <p>政府公佈最新MPF供款調整，月入超過$30,000人士如何最大化節稅效益...</p>
+                    </div>
+                    
+                    <div class="update-item">
+                        <div class="update-meta">
+                            <span><i class="fas fa-tag"></i> 跨境稅務</span>
+                            <span><i class="fas fa-calendar"></i> 2023年11月8日</span>
+                        </div>
+                        <h4>大灣區遺產規劃新規深度分析</h4>
+                        <p>三地聯動遺產認證新程序實施，跨境資產傳承效率提升40%的關鍵策略...</p>
+                    </div>
+                    
+                    <div class="update-item">
+                        <div class="update-meta">
+                            <span><i class="fas fa-tag"></i> 醫療保險</span>
+                            <span><i class="fas fa-calendar"></i> 2023年11月1日</span>
+                        </div>
+                        <h4>香港私營醫療費用指數發佈</h4>
+                        <p>最新數據顯示專科診療費用年增8.7%，如何通過保險規劃鎖定醫療成本...</p>
+                    </div>
+                </div>
+                
+                <div class="director-column">
+                    <div class="update-header">
+                        <h3>總監專欄</h3>
+                    </div>
+                    <div class="update-item">
+                        <h4>2024年香港中產家庭三大保障缺口</h4>

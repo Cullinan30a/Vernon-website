@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vernon Cheuk 卓君風 - 宏利保險區域總監 | 專業理財規劃服務</title>
+    <!-- EmailJS CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- Netlify Forms 隱藏表格 - 用於表格識別 -->
+    <form name="vernon-contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="inquiryType" />
+      <textarea name="message"></textarea>
+    </form>
+    
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -54,10 +54,10 @@ import hkBusiness from './assets/hk_business.jpg'
 import hkDimsum from './assets/hk_dimsum.jpg'
 
 // AI卡通人像作為裝飾
-import aiVernonBusiness from '/ai-avatars/vernon-business.jpg'
-import aiVernonSport from '/ai-avatars/vernon-sport.png'
-import aiVernonMahjong from '/ai-avatars/vernon-mahjong.png'
-import aiVernonRecruit from '/ai-avatars/vernon-recruit.png'
+import aiVernonBusiness from './assets/vernon-business.jpg'
+import aiVernonSport from './assets/vernon-sport.png'
+import aiVernonMahjong from './assets/vernon-mahjong.png'
+import aiVernonRecruit from './assets/vernon-recruit.png'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

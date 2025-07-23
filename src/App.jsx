@@ -202,7 +202,7 @@ function App() {
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                   <Sparkles className="w-3 h-3 mr-1" />
-                  v3.7
+                  v3.8
                 </Badge>
                 <Badge variant="outline" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-md">
                   <Calendar className="w-3 h-3 mr-1" />
@@ -981,17 +981,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <Clock className="w-5 h-5 mr-2 text-green-600" />
-                  服務時間
-                </h3>
-                <div className="space-y-2 text-gray-600">
-                  <div>星期一至五：9:00 AM - 6:00 PM</div>
-                  <div>星期六：9:00 AM - 1:00 PM</div>
-                  <div>星期日及公眾假期：預約制</div>
-                </div>
-              </div>
+
             </div>
 
             <Card className="shadow-xl border-0 bg-gradient-to-br from-white to-blue-50">

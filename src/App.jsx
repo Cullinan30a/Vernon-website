@@ -202,7 +202,7 @@ function App() {
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                   <Sparkles className="w-3 h-3 mr-1" />
-                  v3.9
+                  v4.0
                 </Badge>
                 <Badge variant="outline" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-md">
                   <Calendar className="w-3 h-3 mr-1" />
@@ -215,127 +215,8 @@ function App() {
               <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">關於我</a>
               <a href="#values" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">核心理念</a>
               <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">服務項目</a>
-      {/* 職業亮點 */}
-      <section id="career" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <Badge className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white border-0 shadow-md mb-4">
-              <Star className="w-3 h-3 mr-1" />
-              職業亮點
-            </Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                職業亮點
-              </span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* 長期服務與晉升 */}
-            <Card className="shadow-xl border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
-                  <TrendingUp className="w-6 h-6 mr-3 text-blue-600" />
-                  長期服務與晉升
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <div className="font-semibold text-blue-700">1991年</div>
-                    <div className="text-gray-600">加入宏利，開啟其保險行業的職業生涯。</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <div className="font-semibold text-purple-700">2015年</div>
-                    <div className="text-gray-600">晉升為<strong>高級分區總監（SDD）</strong>，彰顯其領導才能與專業知識。</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <div className="font-semibold text-green-700">2018年</div>
-                    <div className="text-gray-600">進一步晉升為<strong>區域總監（RD）</strong>，展現其在宏利內部的穩步發展與影響力。</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* 行業領導角色 */}
-            <Card className="shadow-xl border-0 bg-gradient-to-br from-amber-50 to-orange-50">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
-                  <Trophy className="w-6 h-6 mr-3 text-amber-600" />
-                  行業領導角色
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <div className="font-semibold text-red-700">2025-2026年</div>
-                    <div className="text-gray-600">擔任<strong>壽險行業規管與發展關注組召集人</strong>，在行業政策與發展方向上發揮重要作用。</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <div className="font-semibold text-blue-700">2021-2025年</div>
-                    <div className="text-gray-600">連續擔任<strong>香港人壽保險經理協會（GAMAHK）行業發展常務委員會主席</strong>，體現對行業發展的長期承諾。</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <div className="font-semibold text-yellow-700">2019年及2020年</div>
-                    <div className="text-gray-600">擔任<strong>GAMAHK會長</strong>，領導香港壽險經理協會。</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <div className="font-semibold text-purple-700">2024年</div>
-                    <div className="text-gray-600">擔任<strong>GAMA LAMPASIA籌委會主席</strong>，負責領導重要的行業領袖高峰會及榮譽獎項頒獎禮。</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <div className="font-semibold text-green-700">2023年</div>
-                    <div className="text-gray-600">成為<strong>GAMAHK慈善基金委員</strong>，參與社會責任項目。</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <div className="font-semibold text-indigo-700">2021-2022年</div>
-                    <div className="text-gray-600">擔任<strong>宏利理財策劃協會（AFP）主席</strong>，推動內部領導計劃。</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <div className="font-semibold text-pink-700">2012、2016、2017、2020、2022年</div>
-                    <div className="text-gray-600">多次擔任<strong>宏利圓桌會行政委員會（RTC）主席</strong>，展現其在公司內部的持續影響力。</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <div className="font-semibold text-teal-700">2019年</div>
-                    <div className="text-gray-600">擔任<strong>亞太壽險大會製作總監</strong>，參與國際級行業盛事。</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-              <a href="#career" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">職業履歷</a>
+              <a href="#achievements" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">成就榮譽</a>
+              <a href="#career" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">職業亮點</a>
               <a href="#media" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">媒體報導</a>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">聯絡我</a>
             </div>
@@ -356,7 +237,7 @@ function App() {
                 <a href="#values" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>核心理念</a>
                 <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>服務項目</a>
                 <a href="#achievements" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>成就榮譽</a>
-                <a href="#career" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>職業履歷</a>
+                <a href="#career" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>職業亮點</a>
                 <a href="#media" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>媒體報導</a>
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>聯絡我</a>
               </div>
@@ -381,22 +262,6 @@ function App() {
         <div className="max-w-7xl mx-auto relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              {/* 重要頭銜 - 最顯眼位置 */}
-              <div className="space-y-3 mb-6">
-                <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
-                  <Building className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                  <span className="break-words font-bold">宏利香港區域總監</span>
-                </Badge>
-                <Badge className="bg-gradient-to-r from-red-500 to-pink-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
-                  <Trophy className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                  <span className="break-words">2025-2026 壽險行業規管與發展關注組召集人</span>
-                </Badge>
-                <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
-                  <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                  <span className="break-words">GAMA前會長暨現任行業發展常務委員會主席</span>
-                </Badge>
-              </div>
-
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent">
@@ -407,6 +272,23 @@ function App() {
                     Vernon Cheuk
                   </span>
                 </h1>
+                
+                {/* 重要頭銜 - 移到Vernon Cheuk英文名之下 */}
+                <div className="space-y-3 mb-6">
+                  <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
+                    <Building className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
+                    <span className="break-words font-bold">宏利香港區域總監</span>
+                  </Badge>
+                  <Badge className="bg-gradient-to-r from-red-500 to-pink-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
+                    <Trophy className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
+                    <span className="break-words">2025-2026 壽險行業規管與發展關注組召集人</span>
+                  </Badge>
+                  <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
+                    <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
+                    <span className="break-words">GAMA前會長暨現任行業發展常務委員會主席</span>
+                  </Badge>
+                </div>
+                
                 <p className="text-xl text-gray-600 leading-relaxed">
                   從草根家庭出身到成為宏利保險區域總監，我始終堅持「真誠卓志」的理念，
                   以客戶利益為先，為每一位客戶提供最適合的保險及理財方案。
@@ -700,145 +582,118 @@ function App() {
         </div>
       </section>
 
-      {/* 職業履歷 */}
+      {/* 職業亮點 */}
       <section id="career" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white border-0 shadow-md mb-4">
-              <Briefcase className="w-3 h-3 mr-1" />
-              職業履歷
+              <Star className="w-3 h-3 mr-1" />
+              職業亮點
             </Badge>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                完整職業發展歷程
+                職業亮點
               </span>
             </h2>
           </div>
 
-          <div className="space-y-8">
-            {/* 當前重要職位 */}
-            <Card className="bg-gradient-to-r from-red-50 to-pink-50 border-0 shadow-xl">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* 長期服務與晉升 */}
+            <Card className="shadow-xl border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
-                  <Trophy className="w-6 h-6 mr-3 text-red-600" />
-                  現任重要職位
+                  <TrendingUp className="w-6 h-6 mr-3 text-blue-600" />
+                  長期服務與晉升
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">香港人壽保險經理協會（GAMAHK）壽險行業監管與發展關注組召集人</div>
-                      <div className="text-gray-600">現任</div>
-                    </div>
+              <CardContent className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-blue-700">1991年</div>
+                    <div className="text-gray-600">加入宏利，開啟其保險行業的職業生涯。</div>
                   </div>
-                  <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">宏利香港區域總監</div>
-                      <div className="text-gray-600">現任</div>
-                    </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-purple-700">2015年</div>
+                    <div className="text-gray-600">晉升為<strong>高級分區總監（SDD）</strong>，彰顯其領導才能與專業知識。</div>
                   </div>
-                  <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">GAMAHK 前會長</div>
-                      <div className="text-gray-600">2020年及2019年</div>
-                    </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-green-700">2018年</div>
+                    <div className="text-gray-600">進一步晉升為<strong>區域總監（RD）</strong>，展現其在宏利內部的穩步發展與影響力。</div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* 職業發展時間線 */}
-            <Card className="bg-white border-0 shadow-xl">
+            {/* 行業領導角色 */}
+            <Card className="shadow-xl border-0 bg-gradient-to-br from-amber-50 to-orange-50">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
-                  <Calendar className="w-6 h-6 mr-3 text-blue-600" />
-                  職業發展時間線
+                  <Trophy className="w-6 h-6 mr-3 text-amber-600" />
+                  行業領導角色
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">2024年</div>
-                      <div className="text-gray-700">香港人壽保險經理協會領袖高峰會暨榮譽獎項頒獎禮（GAMA LAMP ASIA）籌委會主席</div>
-                    </div>
+              <CardContent className="space-y-3">
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-red-700">2025-2026年</div>
+                    <div className="text-gray-600">擔任<strong>壽險行業規管與發展關注組召集人</strong>，在行業政策與發展方向上發揮重要作用。</div>
                   </div>
-                  
-                  <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">2023年</div>
-                      <div className="text-gray-700">香港人壽保險經理協會（GAMAHK）慈善基金委員</div>
-                    </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-blue-700">2021-2025年</div>
+                    <div className="text-gray-600">連續擔任<strong>香港人壽保險經理協會（GAMAHK）行業發展常務委員會主席</strong>，體現對行業發展的長期承諾。</div>
                   </div>
-
-                  <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg">
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">2021年 - 2025年</div>
-                      <div className="text-gray-700">香港人壽保險經理協會（GAMAHK）行業發展常務委員會主席</div>
-                    </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-yellow-700">2019年及2020年</div>
+                    <div className="text-gray-600">擔任<strong>GAMAHK會長</strong>，領導香港壽險經理協會。</div>
                   </div>
-
-                  <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">2021年 - 2022年</div>
-                      <div className="text-gray-700">宏利理財策劃協會（AFP）主席</div>
-                    </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-purple-700">2024年</div>
+                    <div className="text-gray-600">擔任<strong>GAMA LAMPASIA籌委會主席</strong>，負責領導重要的行業領袖高峰會及榮譽獎項頒獎禮。</div>
                   </div>
-
-                  <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-red-50 to-pink-50 rounded-lg">
-                    <div className="w-3 h-3 bg-red-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">2020年及2019年</div>
-                      <div className="text-gray-700">香港人壽保險經理協會（GAMAHK）會長</div>
-                    </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-green-700">2023年</div>
+                    <div className="text-gray-600">成為<strong>GAMAHK慈善基金委員</strong>，參與社會責任項目。</div>
                   </div>
-
-                  <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg">
-                    <div className="w-3 h-3 bg-indigo-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">2019年</div>
-                      <div className="text-gray-700">亞太壽險大會製作總監</div>
-                    </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-indigo-700">2021-2022年</div>
+                    <div className="text-gray-600">擔任<strong>宏利理財策劃協會（AFP）主席</strong>，推動內部領導計劃。</div>
                   </div>
-
-                  <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg">
-                    <div className="w-3 h-3 bg-teal-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">2018年</div>
-                      <div className="text-gray-700">晉升為區域總監（RD）</div>
-                    </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-pink-700">2012、2016、2017、2020、2022年</div>
+                    <div className="text-gray-600">多次擔任<strong>宏利圓桌會行政委員會（RTC）主席</strong>，展現其在公司內部的持續影響力。</div>
                   </div>
-
-                  <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg">
-                    <div className="w-3 h-3 bg-orange-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">2015年</div>
-                      <div className="text-gray-700">晉升為高級分區總監（SDD）</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg">
-                    <div className="w-3 h-3 bg-pink-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">2012、2016、2017、2020及2022年</div>
-                      <div className="text-gray-700">擔任宏利圓桌會行政委員會（RTC）主席</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4 p-4 bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg">
-                    <div className="w-3 h-3 bg-gray-500 rounded-full mt-2"></div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-900">1991年</div>
-                      <div className="text-gray-700">加入宏利</div>
-                    </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-teal-700">2019年</div>
+                    <div className="text-gray-600">擔任<strong>亞太壽險大會製作總監</strong>，參與國際級行業盛事。</div>
                   </div>
                 </div>
               </CardContent>
@@ -1057,7 +912,7 @@ function App() {
         </div>
       </section>
 
-      {/* 聯絡我們 */}
+      {/* 聯絡我們 - 已移除服務時間 */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -1099,8 +954,6 @@ function App() {
                   </div>
                 </div>
               </div>
-
-
             </div>
 
             <Card className="shadow-xl border-0 bg-gradient-to-br from-white to-blue-50">

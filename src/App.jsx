@@ -202,7 +202,7 @@ function App() {
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                   <Sparkles className="w-3 h-3 mr-1" />
-                  v4.0
+                  v5.0
                 </Badge>
                 <Badge variant="outline" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-md">
                   <Calendar className="w-3 h-3 mr-1" />
@@ -496,85 +496,165 @@ function App() {
         </div>
       </section>
 
-      {/* 成就與榮譽 */}
+      {/* 成就與榮譽 - 重新設計 */}
       <section id="achievements" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 to-orange-50">
         <div className="max-w-7xl mx-auto">
+          {/* 頂部亮點橫幅 */}
           <div className="text-center mb-16">
             <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-md mb-4">
               <Trophy className="w-3 h-3 mr-1" />
-              成就與榮譽
+              專業里程碑與行業領導力
             </Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8">
               <span className="bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">
                 35年來在保險業界獲得的專業認可和領導地位
               </span>
             </h2>
+            
+            {/* 亮點橫幅 */}
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl shadow-2xl mb-12">
+              <p className="text-xl leading-relaxed mb-6">
+                自1991年起，累積35年保險經驗，現任宏利區域總監；今年 & 明年擔任「壽險行業規管與發展關注組召集人」；
+                曾任 GAMA 前會長，現為其行業發展常務委員會主席，領導150人高效團隊，服務逾1萬客戶，續保率90%。
+              </p>
+              
+              {/* 關鍵數據展示 */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div className="text-center bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                  <Building className="w-8 h-8 mx-auto mb-2" />
+                  <div className="text-sm font-semibold">宏利區域總監</div>
+                </div>
+                <div className="text-center bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                  <Users className="w-8 h-8 mx-auto mb-2" />
+                  <div className="text-sm font-semibold">150人團隊</div>
+                </div>
+                <div className="text-center bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                  <Target className="w-8 h-8 mx-auto mb-2" />
+                  <div className="text-sm font-semibold">10,000+ 客戶</div>
+                </div>
+                <div className="text-center bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                  <RefreshCw className="w-8 h-8 mx-auto mb-2" />
+                  <div className="text-sm font-semibold">90%續保率</div>
+                </div>
+                <div className="text-center bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                  <Zap className="w-8 h-8 mx-auto mb-2" />
+                  <div className="text-sm font-semibold">行業召集人</div>
+                  <div className="text-xs">(2025–26)</div>
+                </div>
+                <div className="text-center bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                  <Star className="w-8 h-8 mx-auto mb-2" />
+                  <div className="text-sm font-semibold">GAMA 領導</div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="space-y-8">
-            <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
-                  <Award className="w-6 h-6 mr-3 text-yellow-600" />
-                  專業資格及殊榮
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
-                    <Star className="w-6 h-6 text-blue-600" />
-                    <div>
-                      <div className="font-semibold text-gray-900">宏利保險區域總監</div>
-                    </div>
+          {/* 專業資質 & 榮譽（Icon 卡片網格）*/}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">專業資質與榮譽</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Building className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg">
-                    <Star className="w-6 h-6 text-green-600" />
-                    <div>
-                      <div className="font-semibold text-gray-900">35年保險業經驗 (1991-2025)</div>
-                    </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">宏利區域總監</h4>
+                  <p className="text-sm text-gray-600">領導地位認證</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Trophy className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg">
-                    <Star className="w-6 h-6 text-yellow-600" />
-                    <div>
-                      <div className="font-semibold text-gray-900">百萬圓桌會終身會員 (MDRT)</div>
-                    </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">MDRT 終身會員</h4>
+                  <p className="text-sm text-gray-600">百萬圓桌會</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-                    <Star className="w-6 h-6 text-purple-600" />
-                    <div>
-                      <div className="font-semibold text-gray-900">國際龍獎 (IDA)</div>
-                    </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">IDA、IQA、DMA</h4>
+                  <p className="text-sm text-gray-600">國際專業認證</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-green-50 to-green-100 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Star className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-red-50 to-pink-50 rounded-lg">
-                    <Star className="w-6 h-6 text-red-600" />
-                    <div>
-                      <div className="font-semibold text-gray-900">國際優質服務獎 (IQA)</div>
-                    </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">GAMA 管理類大獎</h4>
+                  <p className="text-sm text-gray-600">MAA / FLA / IMA</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* 軟實力與人設魅力 */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">軟實力與領導魅力</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Target className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg">
-                    <Star className="w-6 h-6 text-indigo-600" />
-                    <div>
-                      <div className="font-semibold text-gray-900">傑出人壽保險經理獎 (DMA)</div>
-                    </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">專業專注</h4>
+                  <div className="space-y-2 text-gray-600">
+                    <div>• 銷售細節掌控</div>
+                    <div>• 客戶心理學</div>
+                    <div>• 團隊管理智慧</div>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg">
-                    <Star className="w-6 h-6 text-teal-600" />
-                    <div>
-                      <div className="font-semibold text-gray-900">GAMA最高管理成就獎 (MAA)</div>
-                    </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Heart className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg">
-                    <Star className="w-6 h-6 text-orange-600" />
-                    <div>
-                      <div className="font-semibold text-gray-900">GAMA管理發展獎 (FLA)</div>
-                    </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">生活品味</h4>
+                  <div className="space-y-2 text-gray-600">
+                    <div>• 健身愛好者</div>
+                    <div>• 生活品味實踐家</div>
+                    <div>• 工作生活平衡</div>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg">
-                    <Star className="w-6 h-6 text-pink-600" />
-                    <div>
-                      <div className="font-semibold text-gray-900">GAMA管理卓越獎 (IMA)</div>
-                    </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Users className="w-8 h-8 text-white" />
                   </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">團隊領導</h4>
+                  <div className="space-y-2 text-gray-600">
+                    <div>• 150人團隊管理</div>
+                    <div>• 人才培養專家</div>
+                    <div>• 重情重義文化</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* 結語強調 */}
+          <div className="text-center">
+            <Card className="bg-gradient-to-r from-gray-900 to-blue-900 text-white border-0 shadow-2xl">
+              <CardContent className="p-12">
+                <blockquote className="text-2xl font-bold leading-relaxed mb-6">
+                  "從銷售一線到宏利領導層，再到行業規則制定核心，Vernon 已由實戰高手成長為業界領袖——
+                  他不僅提升 VNITED 的成績，也引領整個產業邁向更高標準。"
+                </blockquote>
+                <div className="flex items-center justify-center space-x-4">
+                  <div className="w-12 h-1 bg-yellow-400"></div>
+                  <Star className="w-8 h-8 text-yellow-400" />
+                  <div className="w-12 h-1 bg-yellow-400"></div>
                 </div>
               </CardContent>
             </Card>

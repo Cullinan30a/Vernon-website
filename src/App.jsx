@@ -155,20 +155,37 @@ function App() {
     {
       icon: Shield,
       title: "人壽保險規劃",
-      description: "為您和家人提供全面的人壽保障，確保財務安全",
-      manulifeLink: "https://www.manulife.com.hk/zh-hk/individual/products/life-insurance.html"
+      description: "為您和家人提供全面的人壽保障，確保財務安全"
     },
     {
       icon: Heart,
       title: "醫療保險諮詢", 
-      description: "專業醫療保險建議，保障您的健康與財富",
-      manulifeLink: "https://www.manulife.com.hk/zh-hk/individual/products/health-insurance.html"
+      description: "專業醫療保險建議，保障您的健康與財富"
     },
     {
       icon: TrendingUp,
       title: "退休規劃",
-      description: "制定適合的退休計劃，享受無憂的黃金歲月",
-      manulifeLink: "https://www.manulife.com.hk/zh-hk/individual/products/retirement-planning.html"
+      description: "制定適合的退休計劃，享受無憂的黃金歲月"
+    },
+    {
+      icon: GraduationCap,
+      title: "強積金服務",
+      description: "專業MPF投資管理建議，助您累積退休財富"
+    },
+    {
+      icon: BookOpen,
+      title: "子女教育基金",
+      description: "為子女教育提前規劃，確保教育資金充足"
+    },
+    {
+      icon: Trophy,
+      title: "財富傳承",
+      description: "專業的財富管理和傳承規劃服務"
+    },
+    {
+      icon: Building,
+      title: "家族辦公室",
+      description: "為高淨值家族提供全方位財富管理和傳承服務"
     }
   ]
 
@@ -216,13 +233,13 @@ function App() {
           {isMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-200">
               <div className="flex flex-col space-y-4">
-                <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">關於我</a>
-                <a href="#values" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">核心理念</a>
-                <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">服務項目</a>
-                <a href="#achievements" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">成就榮譽</a>
-                <a href="#career" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">職業履歷</a>
-                <a href="#media" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">媒體報導</a>
-                <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">聯絡我</a>
+                <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>關於我</a>
+                <a href="#values" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>核心理念</a>
+                <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>服務項目</a>
+                <a href="#achievements" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>成就榮譽</a>
+                <a href="#career" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>職業履歷</a>
+                <a href="#media" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>媒體報導</a>
+                <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>聯絡我</a>
               </div>
             </div>
           )}
@@ -247,17 +264,17 @@ function App() {
             <div className="space-y-8">
               {/* 重要頭銜 - 最顯眼位置 */}
               <div className="space-y-3 mb-6">
-                <Badge className="bg-gradient-to-r from-red-500 to-pink-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
-                  <Trophy className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                  <span className="break-words">香港人壽保險經理協會（GAMAHK）壽險行業監管與發展關注組召集人</span>
-                </Badge>
                 <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
                   <Building className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
                   <span className="break-words font-bold">宏利香港區域總監</span>
                 </Badge>
+                <Badge className="bg-gradient-to-r from-red-500 to-pink-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
+                  <Trophy className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
+                  <span className="break-words">2025-2026 壽險行業規管與發展關注組召集人</span>
+                </Badge>
                 <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
                   <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                  <span className="break-words">GAMAHK 前會長</span>
+                  <span className="break-words">GAMA前會長暨現任行業發展常務委員會主席</span>
                 </Badge>
               </div>
 
@@ -363,7 +380,7 @@ function App() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">團隊領導</h3>
                 <p className="text-gray-700 leading-relaxed">
                   現時領導VNITED團隊超過150人，直屬團隊有十多名經理。在短短10年間，
-                  培訓出共5名分區總監，團隊多次奪得宏利平均業績獎項。看著團隊成員從入行到事業有成，
+                  培訓出共4名分區總監，團隊多次奪得宏利平均業績獎項。看著團隊成員從入行到事業有成，
                   從單身到結婚生子，這就是我最大的滿足感。
                 </p>
               </div>
@@ -470,73 +487,10 @@ function App() {
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300"
-                    onClick={() => window.open(service.manulifeLink, '_blank')}
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    了解更多
-                  </Button>
+                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
-
-            {/* 額外服務項目 */}
-            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-white to-green-50">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mb-6">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">強積金服務</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">專業MPF投資管理建議，助您累積退休財富</p>
-                <Button 
-                  variant="outline" 
-                  className="w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300"
-                  onClick={() => window.open('https://www.manulife.com.hk/zh-hk/individual/products/mpf.html', '_blank')}
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  了解更多
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-white to-yellow-50">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mb-6">
-                  <GraduationCap className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">子女教育基金</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">為子女教育提前規劃，確保教育資金充足</p>
-                <Button 
-                  variant="outline" 
-                  className="w-full border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white transition-all duration-300"
-                  onClick={() => window.open('https://www.manulife.com.hk/zh-hk/individual/products/education-savings.html', '_blank')}
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  了解更多
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-white to-purple-50">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-6">
-                  <HandHeart className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">財富傳承</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">專業的財富管理和傳承規劃服務</p>
-                <Button 
-                  variant="outline" 
-                  className="w-full border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white transition-all duration-300"
-                  onClick={() => window.open('https://www.manulife.com.hk/zh-hk/individual/products/wealth-management.html', '_blank')}
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  了解更多
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -896,7 +850,7 @@ function App() {
                     <CheckCircle className="w-6 h-6 text-green-600 mt-1" />
                     <div>
                       <h4 className="font-semibold text-gray-900">完善培訓制度</h4>
-                      <p className="text-gray-600">10年間培訓出5名分區總監的成功經驗</p>
+                      <p className="text-gray-600">10年間培訓出4名分區總監的成功經驗</p>
                     </div>
                   </div>
                   

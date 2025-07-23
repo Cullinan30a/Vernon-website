@@ -202,7 +202,7 @@ function App() {
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                   <Sparkles className="w-3 h-3 mr-1" />
-                  v5.0
+                  v5.1
                 </Badge>
                 <Badge variant="outline" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-md">
                   <Calendar className="w-3 h-3 mr-1" />
@@ -290,8 +290,7 @@ function App() {
                 </div>
                 
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  從草根家庭出身到成為宏利保險區域總監，我始終堅持「真誠卓志」的理念，
-                  以客戶利益為先，為每一位客戶提供最適合的保險及理財方案。
+                  Vernon 憑藉自1991年起積累的35年保險行業經驗，從前線銷售精英晉升為宏利區域總監，帶領四個分區的150人高效 VNITED 團隊，服務逾10,000名客戶，續保率達90%，展現卓越的領導力與客戶信任。作為前 GAMA 會長及現任行業發展常務委員會主席，他以實戰智慧推動行業進步。今明兩年，Vernon 擔任「壽險行業規管與發展關注組召集人」，帶領各保險公司代表與政府保險監管局協作，制定前瞻性行業規範，引領壽險業邁向更透明、更具持續性的未來。他的遠見與行動力，正持續為行業樹立新標杆。
                 </p>
               </div>
 

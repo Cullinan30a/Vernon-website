@@ -247,17 +247,17 @@ function App() {
             <div className="space-y-8">
               {/* 重要頭銜 - 最顯眼位置 */}
               <div className="space-y-3 mb-6">
-                <Badge className="bg-gradient-to-r from-red-500 to-pink-500 text-white border-0 shadow-lg text-sm px-4 py-2">
-                  <Trophy className="w-4 h-4 mr-2" />
-                  香港人壽保險經理協會（GAMAHK）壽險行業監管與發展關注組召集人
+                <Badge className="bg-gradient-to-r from-red-500 to-pink-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
+                  <Trophy className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
+                  <span className="break-words">香港人壽保險經理協會（GAMAHK）壽險行業監管與發展關注組召集人</span>
                 </Badge>
-                <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 shadow-lg text-sm px-4 py-2">
-                  <Building className="w-4 h-4 mr-2" />
-                  宏利香港區域總監
+                <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
+                  <Building className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
+                  <span className="break-words font-bold">宏利香港區域總監</span>
                 </Badge>
-                <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-lg text-sm px-4 py-2">
-                  <Star className="w-4 h-4 mr-2" />
-                  GAMAHK 前會長
+                <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
+                  <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
+                  <span className="break-words">GAMAHK 前會長</span>
                 </Badge>
               </div>
 

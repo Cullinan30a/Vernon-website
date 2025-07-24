@@ -54,6 +54,15 @@ import hkFinancial from './assets/hk_financial.jpg'
 import hkBusiness from './assets/hk_business.jpg'
 import hkDimsum from './assets/hk_dimsum.jpg'
 
+// 服務項目背景圖像
+import lifeInsuranceBg from './assets/life_insurance_planning.jpg'
+import medicalInsuranceBg from './assets/medical_insurance_consultation.jpg'
+import retirementPlanningBg from './assets/retirement_planning.jpg'
+import mpfServicesBg from './assets/mpf_services.jpg'
+import educationFundBg from './assets/education_fund.jpg'
+import wealthInheritanceBg from './assets/wealth_inheritance.jpg'
+import familyOfficeBg from './assets/family_office.png'
+
 // AI卡通人像作為裝飾
 import aiVernonBusiness from './assets/vernon-business.jpg'
 import aiVernonSport from './assets/vernon-sport.png'
@@ -156,37 +165,44 @@ function App() {
     {
       icon: Shield,
       title: "人壽保險規劃",
-      description: "為您和家人提供全面的人壽保障，確保財務安全"
+      description: "為您和家人提供全面的人壽保障，確保財務安全",
+      backgroundImage: lifeInsuranceBg
     },
     {
       icon: Heart,
       title: "醫療保險諮詢", 
-      description: "專業醫療保險建議，保障您的健康與財富"
+      description: "專業醫療保險建議，保障您的健康與財富",
+      backgroundImage: medicalInsuranceBg
     },
     {
       icon: TrendingUp,
       title: "退休規劃",
-      description: "制定適合的退休計劃，享受無憂的黃金歲月"
+      description: "制定適合的退休計劃，享受無憂的黃金歲月",
+      backgroundImage: retirementPlanningBg
     },
     {
       icon: GraduationCap,
       title: "強積金服務",
-      description: "專業MPF投資管理建議，助您累積退休財富"
+      description: "專業MPF投資管理建議，助您累積退休財富",
+      backgroundImage: mpfServicesBg
     },
     {
       icon: BookOpen,
       title: "子女教育基金",
-      description: "為子女教育提前規劃，確保教育資金充足"
+      description: "為子女教育提前規劃，確保教育資金充足",
+      backgroundImage: educationFundBg
     },
     {
       icon: Trophy,
       title: "財富傳承",
-      description: "專業的財富管理和傳承規劃服務"
+      description: "專業的財富管理和傳承規劃服務",
+      backgroundImage: wealthInheritanceBg
     },
     {
       icon: Building,
       title: "家族辦公室",
-      description: "為高淨值家族提供全方位財富管理和傳承服務"
+      description: "為高淨值家族提供全方位財富管理和傳承服務",
+      backgroundImage: familyOfficeBg
     }
   ]
 
@@ -203,7 +219,7 @@ function App() {
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                   <Sparkles className="w-3 h-3 mr-1" />
-                  v5.5
+                  v5.7
                 </Badge>
                 <Badge variant="outline" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-md">
                   <Calendar className="w-3 h-3 mr-1" />
@@ -482,13 +498,22 @@ function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {services.map((service, index) => (
-              <Card key={index} className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-white to-blue-50">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+              <Card key={index} className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden relative">
+                {/* 背景圖像 */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: `url(${service.backgroundImage})` }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
+                </div>
+                
+                {/* 內容 */}
+                <CardContent className="relative z-10 p-8 text-white">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 border border-white/30">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-4 drop-shadow-lg">{service.title}</h3>
+                  <p className="text-white/90 leading-relaxed drop-shadow-md">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -749,9 +774,12 @@ function App() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Money & Finance 雜誌封面 */}
-            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group"
-                  onClick={() => window.open('https://www.hket.com/article/3222616/卓君風%20真誠卓志', '_blank')}>
-              <CardContent className="p-6">
+            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group">
+              <CardContent className="p-6" onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                window.open('https://www.hket.com/article/3222616/卓君風%20真誠卓志', '_blank');
+              }}>
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center">
                     <BookOpen className="w-6 h-6 text-white" />

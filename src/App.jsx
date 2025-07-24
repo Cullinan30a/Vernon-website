@@ -41,7 +41,12 @@ import {
   Briefcase,
   UserCheck,
   Lightbulb,
-  HandHeart
+  HandHeart,
+  Crown,
+  Scale,
+  Building2,
+  PiggyBank,
+  Stethoscope
 } from 'lucide-react'
 import './App.css'
 
@@ -219,7 +224,7 @@ function App() {
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                   <Sparkles className="w-3 h-3 mr-1" />
-                  v5.8
+                  v5.9
                 </Badge>
                 <Badge variant="outline" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-md">
                   <Calendar className="w-3 h-3 mr-1" />
@@ -478,6 +483,85 @@ function App() {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* 三個重要頭銜 */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="bg-gradient-to-r from-purple-500 to-blue-500 text-white border-0 shadow-md mb-4">
+              <Crown className="w-3 h-3 mr-1" />
+              重要職位
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                行業領導地位
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Vernon在保險業界擔任多項重要職務，推動行業發展與創新
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {/* 宏利區域總監 */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-700" style={{backgroundColor: '#6B46C1'}}></div>
+              <div className="relative z-10 p-8 text-white">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
+                    <Building className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-1">宏利區域總監</h3>
+                    <p className="text-purple-100 text-sm">Manulife Regional Director</p>
+                  </div>
+                </div>
+                <p className="text-purple-50 leading-relaxed">
+                  帶領四個分區，領導<span className="font-bold text-yellow-300">150人</span>高效 VNITED 團隊，服務逾<span className="font-bold text-yellow-300">10,000名</span>客戶，續保率達<span className="font-bold text-yellow-300">90%</span>。
+                </p>
+              </div>
+            </div>
+
+            {/* 壽險行業規管與發展關注組召集人 */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{animationDelay: '0.2s'}}>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700" style={{backgroundColor: '#4C51BF'}}></div>
+              <div className="relative z-10 p-8 text-white">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
+                    <Scale className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-1">壽險行業規管與發展關注組召集人</h3>
+                    <p className="text-blue-100 text-sm">Convener of Life Insurance Regulation and Development Focus Group</p>
+                  </div>
+                </div>
+                <p className="text-blue-50 leading-relaxed">
+                  協同各保險公司與政府保險監管局，制定前瞻性行業規範，推動壽險業透明與可持續發展。
+                </p>
+              </div>
+            </div>
+
+            {/* GAMA 行業發展常務委員會主席 */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{animationDelay: '0.4s'}}>
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-800" style={{backgroundColor: '#2D3748'}}></div>
+              <div className="relative z-10 p-8 text-white">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-1">GAMA 行業發展常務委員會主席</h3>
+                    <p className="text-gray-100 text-sm">Chairman of GAMA Industry Development Standing Committee</p>
+                  </div>
+                </div>
+                <p className="text-gray-50 leading-relaxed">
+                  作為前 GAMA 會長，Vernon 現任行業發展常務委員會主席，領導全球保險行業專業發展與標準提升，通過教育資源及國際網絡合作推動 GAMA 在<span className="font-bold text-yellow-300">25個國家</span>內的影響力。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

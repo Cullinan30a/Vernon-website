@@ -219,7 +219,7 @@ function App() {
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                   <Sparkles className="w-3 h-3 mr-1" />
-                  v5.7
+                  v5.8
                 </Badge>
                 <Badge variant="outline" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-md">
                   <Calendar className="w-3 h-3 mr-1" />
@@ -415,9 +415,13 @@ function App() {
               <img 
                 src={vernonPhoto} 
                 alt="Vernon Cheuk Professional" 
-                className="w-full rounded-2xl shadow-2xl"
+                className="w-full rounded-2xl shadow-2xl cursor-pointer hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
+                onClick={() => window.open('https://www.hket.com/article/3222616/卓君風%20真誠卓志', '_blank')}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl pointer-events-none"></div>
+              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg">
+                <span className="text-sm font-medium text-gray-700">點擊查看專訪</span>
+              </div>
             </div>
           </div>
         </div>

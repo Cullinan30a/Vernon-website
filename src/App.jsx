@@ -202,7 +202,7 @@ function App() {
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                   <Sparkles className="w-3 h-3 mr-1" />
-                  v5.3
+                  v5.4
                 </Badge>
                 <Badge variant="outline" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-md">
                   <Calendar className="w-3 h-3 mr-1" />
@@ -604,23 +604,6 @@ function App() {
                 </CardContent>
               </Card>
             </div>
-          </div>
-
-          {/* 結語強調 */}
-          <div className="text-center">
-            <Card className="bg-gradient-to-r from-gray-900 to-blue-900 text-white border-0 shadow-2xl">
-              <CardContent className="p-12">
-                <blockquote className="text-2xl font-bold leading-relaxed mb-6">
-                  "從銷售一線到宏利領導層，再到行業規則制定核心，Vernon 已由實戰高手成長為業界領袖——
-                  他不僅提升 VNITED 的成績，也引領整個產業邁向更高標準。"
-                </blockquote>
-                <div className="flex items-center justify-center space-x-4">
-                  <div className="w-12 h-1 bg-yellow-400"></div>
-                  <Star className="w-8 h-8 text-yellow-400" />
-                  <div className="w-12 h-1 bg-yellow-400"></div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

@@ -48,6 +48,7 @@ import './App.css'
 // 導入圖片資源
 import vernonCard from './assets/28f8e080-f726-477b-9da7-2bfbe3904f70.jpeg'
 import vernonPhoto from './assets/ade6d802-4db4-43c4-a4fc-a134516d5ef1.jpeg'
+import moneyFinanceMagazine from './assets/money_finance_magazine.png'
 import hkSkyline from './assets/hk_skyline.jpg'
 import hkFinancial from './assets/hk_financial.jpg'
 import hkBusiness from './assets/hk_business.jpg'
@@ -202,7 +203,7 @@ function App() {
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                   <Sparkles className="w-3 h-3 mr-1" />
-                  v5.4
+                  v5.5
                 </Badge>
                 <Badge variant="outline" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-md">
                   <Calendar className="w-3 h-3 mr-1" />
@@ -746,7 +747,42 @@ function App() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Money & Finance 雜誌封面 */}
+            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group"
+                  onClick={() => window.open('https://www.hket.com/article/3222616/卓君風%20真誠卓志', '_blank')}>
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center">
+                    <BookOpen className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">Money & Finance</h3>
+                    <p className="text-gray-600">雜誌封面專訪</p>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <img 
+                    src={moneyFinanceMagazine} 
+                    alt="Money & Finance 雜誌封面 - 卓君風專訪" 
+                    className="w-full rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="space-y-3">
+                  <h4 className="text-lg font-semibold text-gray-900">保險風雲人物專訪</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    「卓君風 真誠卓志」- 展現君子風範，詳細報導Vernon的專業成就與人生哲學。
+                  </p>
+                  <div className="flex items-center text-blue-600 text-sm font-medium group-hover:text-blue-700">
+                    <ExternalLink className="w-4 h-4 mr-1" />
+                    點擊查看完整報導
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* 香港經濟日報專訪 */}
             <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-8">

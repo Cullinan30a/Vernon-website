@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import { Button } from '@/components/ui/button.jsx'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
-import { Badge } from '@/components/ui/badge.jsx'
-import { Separator } from '@/components/ui/separator.jsx'
+import { useState } from 'react';
+import { Button } from '@/components/ui/button.jsx';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card.jsx';
+import { Badge } from '@/components/ui/badge.jsx';
+import { Separator } from '@/components/ui/separator.jsx';
 import { 
   Phone, 
   Mail, 
@@ -47,58 +47,58 @@ import {
   Building2,
   PiggyBank,
   Stethoscope
-} from 'lucide-react'
-import './App.css'
+} from 'lucide-react';
+import './App.css';
 
-// 導入圖片資源
-import vernonCard from './assets/28f8e080-f726-477b-9da7-2bfbe3904f70.jpeg'
-import vernonPhoto from './assets/ade6d802-4db4-43c4-a4fc-a134516d5ef1.jpeg'
-import moneyFinanceMagazine from './assets/money_finance_magazine.png'
-import hkSkyline from './assets/hk_skyline.jpg'
-import hkFinancial from './assets/hk_financial.jpg'
-import hkBusiness from './assets/hk_business.jpg'
-import hkDimsum from './assets/hk_dimsum.jpg'
+// Import image resources
+import vernonCard from './assets/28f8e080-f726-477b-9da7-2bfbe3904f70.jpeg';
+import vernonPhoto from './assets/ade6d802-4db4-43c4-a4fc-a134516d5ef1.jpeg';
+import moneyFinanceMagazine from './assets/money_finance_magazine.png';
+import hkSkyline from './assets/hk_skyline.jpg';
+import hkFinancial from './assets/hk_financial.jpg';
+import hkBusiness from './assets/hk_business.jpg';
+import hkDimsum from './assets/hk_dimsum.jpg';
 
-// 服務項目背景圖像
-import lifeInsuranceBg from './assets/life_insurance_planning.jpg'
-import medicalInsuranceBg from './assets/medical_insurance_consultation.jpg'
-import retirementPlanningBg from './assets/retirement_planning.jpg'
-import mpfServicesBg from './assets/mpf_services.jpg'
-import educationFundBg from './assets/education_fund.jpg'
-import wealthInheritanceBg from './assets/wealth_inheritance.jpg'
-import familyOfficeBg from './assets/family_office.png'
+// Service item background images
+import lifeInsuranceBg from './assets/life_insurance_planning.jpg';
+import medicalInsuranceBg from './assets/medical_insurance_consultation.jpg';
+import retirementPlanningBg from './assets/retirement_planning.jpg';
+import mpfServicesBg from './assets/mpf_services.jpg';
+import educationFundBg from './assets/education_fund.jpg';
+import wealthInheritanceBg from './assets/wealth_inheritance.jpg';
+import familyOfficeBg from './assets/family_office.png';
 
-// AI卡通人像作為裝飾
-import aiVernonBusiness from './assets/vernon-business.jpg'
-import aiVernonSport from './assets/vernon-sport.png'
-import aiVernonMahjong from './assets/vernon-mahjong.png'
-import aiVernonRecruit from './assets/vernon-recruit.png'
+// AI cartoon portraits as decoration
+import aiVernonBusiness from './assets/vernon-business.jpg';
+import aiVernonSport from './assets/vernon-sport.png';
+import aiVernonMahjong from './assets/vernon-mahjong.png';
+import aiVernonRecruit from './assets/vernon-recruit.png';
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     message: '',
     name: '',
     phone: '',
     email: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState('')
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
 
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    })
-  }
+    });
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus('')
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('');
 
     try {
-      // 方法1: 使用Formspree (主要方案)
+      // Method 1: Using Formspree (primary method)
       const formspreeResponse = await fetch('https://formspree.io/f/xdkogqjb', {
         method: 'POST',
         headers: {
@@ -111,19 +111,19 @@ function App() {
           message: formData.message,
           source: 'Vernon Cheuk 網站查詢'
         })
-      })
+      });
 
       if (formspreeResponse.ok) {
-        setSubmitStatus('success')
-        setFormData({ message: '', name: '', phone: '', email: '' })
+        setSubmitStatus('success');
+        setFormData({ message: '', name: '', phone: '', email: '' });
       } else {
-        throw new Error('Formspree failed')
+        throw new Error('Formspree failed');
       }
     } catch (error) {
-      console.log('Formspree failed, trying backup method...')
+      console.log('Formspree failed, trying backup method...');
       
       try {
-        // 方法2: 使用Netlify Forms (備用)
+        // Method 2: Using Netlify Forms (backup)
         const netlifyResponse = await fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -134,19 +134,19 @@ function App() {
             email: formData.email,
             message: formData.message
           }).toString()
-        })
+        });
 
         if (netlifyResponse.ok) {
-          setSubmitStatus('success')
-          setFormData({ message: '', name: '', phone: '', email: '' })
+          setSubmitStatus('success');
+          setFormData({ message: '', name: '', phone: '', email: '' });
         } else {
-          throw new Error('Netlify failed')
+          throw new Error('Netlify failed');
         }
       } catch (netlifyError) {
-        console.log('Netlify failed, using mailto fallback...')
+        console.log('Netlify failed, using mailto fallback...');
         
-        // 方法3: Mailto 備用方案
-        const subject = encodeURIComponent('網站查詢 - ' + formData.name)
+        // Method 3: Mailto fallback
+        const subject = encodeURIComponent('網站查詢 - ' + formData.name);
         const body = encodeURIComponent(`
 查詢內容: ${formData.message}
 姓名: ${formData.name}
@@ -154,18 +154,18 @@ function App() {
 電郵: ${formData.email}
 
 提交時間: ${new Date().toLocaleString('zh-HK')}
-        `)
+        `);
         
-        window.location.href = `mailto:vernoncheuk@gmail.com?subject=${subject}&body=${body}`
-        setSubmitStatus('mailto')
-        setFormData({ message: '', name: '', phone: '', email: '' })
+        window.location.href = `mailto:vernoncheuk@gmail.com?subject=${subject}&body=${body}`;
+        setSubmitStatus('mailto');
+        setFormData({ message: '', name: '', phone: '', email: '' });
       }
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
-  // 服務項目數據
+  // Service item data
   const services = [
     {
       icon: Shield,
@@ -209,11 +209,11 @@ function App() {
       description: "為高淨值家族提供全方位財富管理和傳承服務",
       backgroundImage: familyOfficeBg
     }
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-      {/* 導航欄 */}
+      {/* Navigation Bar */}
       <nav className="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -251,7 +251,7 @@ function App() {
             </button>
           </div>
 
-          {/* 移動端菜單 */}
+          {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-200">
               <div className="flex flex-col space-y-4">
@@ -268,12 +268,12 @@ function App() {
         </div>
       </nav>
 
-      {/* 主橫幅 */}
+      {/* Main Banner */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
-        {/* AI裝飾元素 - 浮動在背景 */}
+        {/* AI Decoration Elements - Floating in Background */}
         <div className="absolute top-10 right-10 w-20 h-20 opacity-20 animate-bounce hidden lg:block">
           <img src={aiVernonSport} alt="" className="w-full h-full object-cover rounded-full" />
         </div>
@@ -295,20 +295,64 @@ function App() {
                   </span>
                 </h1>
                 
-                {/* 重要頭銜 - 移到Vernon Cheuk英文名之下 */}
-                <div className="space-y-3 mb-6">
-                  <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
-                    <Building className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                    <span className="break-words font-bold">宏利香港區域總監</span>
-                  </Badge>
-                  <Badge className="bg-gradient-to-r from-red-500 to-pink-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
-                    <Trophy className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                    <span className="break-words">2025-2026 壽險行業規管與發展關注組召集人</span>
-                  </Badge>
-                  <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-lg text-xs sm:text-sm px-3 py-2 sm:px-4 max-w-full whitespace-normal leading-tight">
-                    <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                    <span className="break-words">GAMA前會長暨現任行業發展常務委員會主席</span>
-                  </Badge>
+                {/* Three Colored Boxes Inserted Here */}
+                <div className="space-y-8">
+                  {/* Manulife Regional Director */}
+                  <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in">
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-700" style={{backgroundColor: '#6B46C1'}}></div>
+                    <div className="relative z-10 p-8 text-white">
+                      <div className="flex items-center mb-4">
+                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
+                          <Building className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold mb-1">宏利區域總監</h3>
+                          <p className="text-purple-100 text-sm">Manulife Regional Director</p>
+                        </div>
+                      </div>
+                      <p className="text-purple-50 leading-relaxed">
+                        帶領四個分區，領導<span className="font-bold text-yellow-300">150人</span>高效 VNITED 團隊，服務逾<span className="font-bold text-yellow-300">10,000名</span>客戶，續保率達<span className="font-bold text-yellow-300">90%</span>。
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Life Insurance Regulation and Development Focus Group Convener */}
+                  <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{animationDelay: '0.2s'}}>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700" style={{backgroundColor: '#4C51BF'}}></div>
+                    <div className="relative z-10 p-8 text-white">
+                      <div className="flex items-center mb-4">
+                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
+                          <Scale className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold mb-1">壽險行業規管與發展關注組召集人</h3>
+                          <p className="text-blue-100 text-sm">Convener of Life Insurance Regulation and Development Focus Group</p>
+                        </div>
+                      </div>
+                      <p className="text-blue-50 leading-relaxed">
+                        協同各保險公司與政府保險監管局，制定前瞻性行業規範，推動壽險業透明與可持續發展。
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* GAMA Industry Development Standing Committee Chairman */}
+                  <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{animationDelay: '0.4s'}}>
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-800" style={{backgroundColor: '#2D3748'}}></div>
+                    <div className="relative z-10 p-8 text-white">
+                      <div className="flex items-center mb-4">
+                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
+                          <Globe className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold mb-1">GAMA 行業發展常務委員會主席</h3>
+                          <p className="text-gray-100 text-sm">Chairman of GAMA Industry Development Standing Committee</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-50 leading-relaxed">
+                        作為前 GAMA 會長，Vernon 現任行業發展常務委員會主席，領導全球保險行業專業發展與標準提升，通過教育資源及國際網絡合作推動 GAMA 在<span className="font-bold text-yellow-300">25個各地分會</span>內的影響力。
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 
                 <p className="text-xl text-gray-600 leading-relaxed">
@@ -365,7 +409,7 @@ function App() {
         </div>
       </section>
 
-      {/* 關於我 */}
+      {/* About Me */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -432,7 +476,7 @@ function App() {
         </div>
       </section>
 
-      {/* 核心理念 */}
+      {/* Core Values */}
       <section id="values" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -487,86 +531,7 @@ function App() {
         </div>
       </section>
 
-      {/* 三個重要頭銜 */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <Badge className="bg-gradient-to-r from-purple-500 to-blue-500 text-white border-0 shadow-md mb-4">
-              <Crown className="w-3 h-3 mr-1" />
-              重要職位
-            </Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                行業領導地位
-              </span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Vernon在保險業界擔任多項重要職務，推動行業發展與創新
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {/* 宏利區域總監 */}
-            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-700" style={{backgroundColor: '#6B46C1'}}></div>
-              <div className="relative z-10 p-8 text-white">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
-                    <Building className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-1">宏利區域總監</h3>
-                    <p className="text-purple-100 text-sm">Manulife Regional Director</p>
-                  </div>
-                </div>
-                <p className="text-purple-50 leading-relaxed">
-                  帶領四個分區，領導<span className="font-bold text-yellow-300">150人</span>高效 VNITED 團隊，服務逾<span className="font-bold text-yellow-300">10,000名</span>客戶，續保率達<span className="font-bold text-yellow-300">90%</span>。
-                </p>
-              </div>
-            </div>
-
-            {/* 壽險行業規管與發展關注組召集人 */}
-            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{animationDelay: '0.2s'}}>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700" style={{backgroundColor: '#4C51BF'}}></div>
-              <div className="relative z-10 p-8 text-white">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
-                    <Scale className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-1">壽險行業規管與發展關注組召集人</h3>
-                    <p className="text-blue-100 text-sm">Convener of Life Insurance Regulation and Development Focus Group</p>
-                  </div>
-                </div>
-                <p className="text-blue-50 leading-relaxed">
-                  協同各保險公司與政府保險監管局，制定前瞻性行業規範，推動壽險業透明與可持續發展。
-                </p>
-              </div>
-            </div>
-
-            {/* GAMA 行業發展常務委員會主席 */}
-            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{animationDelay: '0.4s'}}>
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-800" style={{backgroundColor: '#2D3748'}}></div>
-              <div className="relative z-10 p-8 text-white">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-1">GAMA 行業發展常務委員會主席</h3>
-                    <p className="text-gray-100 text-sm">Chairman of GAMA Industry Development Standing Committee</p>
-                  </div>
-                </div>
-                <p className="text-gray-50 leading-relaxed">
-                  作為前 GAMA 會長，Vernon 現任行業發展常務委員會主席，領導全球保險行業專業發展與標準提升，通過教育資源及國際網絡合作推動 GAMA 在<span className="font-bold text-yellow-300">25個各地分會</span>內的影響力。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 服務項目 */}
+      {/* Services */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -587,7 +552,7 @@ function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {services.map((service, index) => (
               <Card key={index} className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden relative">
-                {/* 背景圖像 */}
+                {/* Background Image */}
                 <div 
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                   style={{ backgroundImage: `url(${service.backgroundImage})` }}
@@ -595,7 +560,7 @@ function App() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
                 </div>
                 
-                {/* 內容 */}
+                {/* Content */}
                 <CardContent className="relative z-10 p-8 text-white">
                   <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 border border-white/30">
                     <service.icon className="w-8 h-8 text-white" />
@@ -609,10 +574,10 @@ function App() {
         </div>
       </section>
 
-      {/* 成就與榮譽 - 重新設計 */}
+      {/* Achievements and Honors - Redesigned */}
       <section id="achievements" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 to-orange-50">
         <div className="max-w-7xl mx-auto">
-          {/* 頂部亮點橫幅 */}
+          {/* Top Highlight Banner */}
           <div className="text-center mb-16">
             <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-md mb-4">
               <Trophy className="w-3 h-3 mr-1" />
@@ -623,10 +588,9 @@ function App() {
                 35年來在保險業界獲得的專業認可和領導地位
               </span>
             </h2>
-            
           </div>
 
-          {/* 專業資質 & 榮譽（Icon 卡片網格）*/}
+          {/* Professional Qualifications & Honors (Icon Card Grid) */}
           <div className="mb-16">
             <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">專業資質與榮譽</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -672,7 +636,7 @@ function App() {
             </div>
           </div>
 
-          {/* 軟實力與人設魅力 */}
+          {/* Soft Skills and Personal Charm */}
           <div className="mb-16">
             <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">軟實力與領導魅力</h3>
             <div className="grid md:grid-cols-3 gap-8">
@@ -722,7 +686,7 @@ function App() {
         </div>
       </section>
 
-      {/* 職業亮點 */}
+      {/* Career Highlights */}
       <section id="career" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -738,7 +702,7 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* 長期服務與晉升 */}
+            {/* Long-term Service and Promotion */}
             <Card className="shadow-xl border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
@@ -771,7 +735,7 @@ function App() {
               </CardContent>
             </Card>
 
-            {/* 行業領導角色 */}
+            {/* Industry Leadership Roles */}
             <Card className="shadow-xl border-0 bg-gradient-to-br from-amber-50 to-orange-50">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
@@ -842,7 +806,7 @@ function App() {
         </div>
       </section>
 
-      {/* 媒體報導 */}
+      {/* Media Coverage */}
       <section id="media" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -861,45 +825,7 @@ function App() {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Money & Finance 雜誌封面 */}
-            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6" onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                window.open('https://www.hket.com/article/3222616/卓君風%20真誠卓志', '_blank');
-              }}>
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center">
-                    <BookOpen className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">Money & Finance</h3>
-                    <p className="text-gray-600">雜誌封面專訪</p>
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <img 
-                    src={moneyFinanceMagazine} 
-                    alt="Money & Finance 雜誌封面 - 卓君風專訪" 
-                    className="w-full rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
-                  />
-                </div>
-
-                <div className="space-y-3">
-                  <h4 className="text-lg font-semibold text-gray-900">保險風雲人物專訪</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    「卓君風 真誠卓志」- 展現君子風範，詳細報導Vernon的專業成就與人生哲學。
-                  </p>
-                  <div className="flex items-center text-blue-600 text-sm font-medium group-hover:text-blue-700">
-                    <ExternalLink className="w-4 h-4 mr-1" />
-                    點擊查看完整報導
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* 香港經濟日報專訪 */}
+            {/* Hong Kong Economic Times Interview */}
             <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex items-center space-x-4 mb-6">
@@ -930,7 +856,7 @@ function App() {
               </CardContent>
             </Card>
 
-            {/* YouTube影片特輯 */}
+            {/* YouTube Video Feature */}
             <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-8">
                 <div className="flex items-center space-x-4 mb-6">
@@ -974,7 +900,7 @@ function App() {
         </div>
       </section>
 
-      {/* 招聘區塊 */}
+      {/* Recruitment Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1059,7 +985,7 @@ function App() {
         </div>
       </section>
 
-      {/* Instagram推薦 */}
+      {/* Instagram Recommendation */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-2xl shadow-xl">
@@ -1090,7 +1016,7 @@ function App() {
         </div>
       </section>
 
-      {/* 聯絡我們 - 已移除服務時間 */}
+      {/* Contact Us - Removed Service Hours */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -1143,7 +1069,7 @@ function App() {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* 查詢內容放在第一項 */}
+                  {/* Inquiry Content as the First Item */}
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       查詢內容 *
@@ -1218,21 +1144,16 @@ function App() {
                     ) : (
                       <>
                         <Mail className="w-4 h-4 mr-2" />
-                        發送查詢
+                        提交查詢
                       </>
                     )}
                   </Button>
-                  
+
                   {submitStatus === 'success' && (
-                    <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
-                      ✅ 查詢已成功發送！我會盡快回覆您。
-                    </div>
+                    <p className="text-green-600 text-center">提交成功！我們將盡快與您聯絡。</p>
                   )}
-                  
                   {submitStatus === 'mailto' && (
-                    <div className="bg-blue-50 border border-blue-200 text-blue-800 px-4 py-3 rounded-lg">
-                      📧 已為您打開郵件客戶端，請確認發送。
-                    </div>
+                    <p className="text-yellow-600 text-center">提交失敗，已啟用郵件備用方式，請檢查您的郵件客戶端。</p>
                   )}
                 </form>
               </CardContent>
@@ -1240,51 +1161,8 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* 頁腳 */}
-      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Vernon Cheuk 卓君風</h3>
-              <p className="text-gray-400 leading-relaxed">
-                宏利保險區域總監，35年專業經驗，致力為客戶提供最優質的保險及理財規劃服務。
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">聯絡資訊</h4>
-              <div className="space-y-2 text-gray-400">
-                <div>電郵：vernoncheuk@gmail.com</div>
-                <div>牌照：IM8724 • 強積金中介人016087</div>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">關注我們</h4>
-              <div className="flex space-x-4">
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="text-gray-400 hover:text-white"
-                  onClick={() => window.open('https://www.instagram.com/vernon_cheuk/', '_blank')}
-                >
-                  <Instagram className="w-5 h-5" />
-                </Button>
-              </div>
-            </div>
-          </div>
-          
-          <Separator className="my-8 bg-gray-700" />
-          
-          <div className="text-center text-gray-400">
-            <p>&copy; 2025 Vernon Cheuk 卓君風. 版權所有.</p>
-          </div>
-        </div>
-      </footer>
     </div>
-  )
+  );
 }
 
-export default App
-
+export default App;

@@ -558,7 +558,7 @@ function App() {
                   </div>
                 </div>
                 <p className="text-gray-50 leading-relaxed">
-                  作為前 GAMA 會長，Vernon 現任行業發展常務委員會主席，領導全球保險行業專業發展與標準提升，通過教育資源及國際網絡合作推動 GAMA 在<span className="font-bold text-yellow-300">25個國家</span>內的影響力。
+                  作為前 GAMA 會長，Vernon 現任行業發展常務委員會主席，領導全球保險行業專業發展與標準提升，通過教育資源及國際網絡合作推動 GAMA 在<span className="font-bold text-yellow-300">25個各地分會</span>內的影響力。
                 </p>
               </div>
             </div>

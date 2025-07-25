@@ -239,7 +239,6 @@ function App() {
               <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">服務項目</a>
               <a href="#achievements" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">成就榮譽</a>
               <a href="#career" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">職業亮點</a>
-              <a href="#media" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">媒體報導</a>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">聯絡我</a>
             </div>
 
@@ -260,7 +259,6 @@ function App() {
                 <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>服務項目</a>
                 <a href="#achievements" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>成就榮譽</a>
                 <a href="#career" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>職業亮點</a>
-                <a href="#media" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>媒體報導</a>
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium" onClick={() => setIsMenuOpen(false)}>聯絡我</a>
               </div>
             </div>
@@ -800,100 +798,6 @@ function App() {
                     <div className="text-gray-600">擔任<strong>亞太壽險大會製作總監</strong>，參與國際級行業盛事。</div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Media Coverage */}
-      <section id="media" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <Badge className="bg-gradient-to-r from-red-500 to-pink-500 text-white border-0 shadow-md mb-4">
-              <Newspaper className="w-3 h-3 mr-1" />
-              媒體報導
-            </Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              <span className="bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">
-                權威媒體認可
-              </span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              獲得香港經濟日報等權威媒體的深度報導和專業認可
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Hong Kong Economic Times Interview */}
-            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center">
-                    <Newspaper className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">香港經濟日報專訪</h3>
-                    <p className="text-gray-600">保險風雲人物深度報導</p>
-                  </div>
-                </div>
-                
-                <div className="space-y-4 mb-6">
-                  <h4 className="text-xl font-semibold text-gray-900">「卓君風 真誠卓志」</h4>
-                  <p className="text-gray-600 leading-relaxed">
-                    香港經濟日報深度專訪，詳細報導Vernon在保險業界的成就和理念，
-                    展現其從草根出身到成為區域總監的勵志故事。
-                  </p>
-                </div>
-
-                <Button 
-                  className="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                  onClick={() => window.open('https://www.hket.com/article/3222616/%E5%8D%93%E5%90%9B%E9%A2%A8%20%E7%9C%9F%E8%AA%A0%E5%8D%93%E5%BF%97', '_blank')}
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  閱讀完整專訪
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* YouTube Video Feature */}
-            <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center">
-                    <Youtube className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">YouTube影片特輯</h3>
-                    <p className="text-gray-600">香港經濟日報採訪影片</p>
-                  </div>
-                </div>
-                
-                <div className="space-y-4 mb-6">
-                  <div className="space-y-3">
-                    <Button 
-                      variant="outline" 
-                      className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-300"
-                      onClick={() => window.open('https://youtu.be/87ENL-d9DA0?si=xAKjEMF5AyqcHb9M', '_blank')}
-                    >
-                      <Play className="w-4 h-4 mr-2" />
-                      觀看採訪特輯 (第一集)
-                    </Button>
-                    
-                    <Button 
-                      variant="outline" 
-                      className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-300"
-                      onClick={() => window.open('https://youtu.be/HzF4zLYvu_c?si=issh4hYRgHo8F_JV', '_blank')}
-                    >
-                      <Play className="w-4 h-4 mr-2" />
-                      觀看採訪特輯 (第二集)
-                    </Button>
-                  </div>
-                </div>
-
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  深度訪談內容涵蓋Vernon的職業發展歷程、管理理念和對保險業未來的展望。
-                </p>
               </CardContent>
             </Card>
           </div>

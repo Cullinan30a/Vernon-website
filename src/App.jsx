@@ -49,7 +49,7 @@ import {
   Stethoscope
 } from 'lucide-react';
 import './App.css';
-
+ 
 // Import image resources
 import vernonCard from './assets/28f8e080-f726-477b-9da7-2bfbe3904f70.jpeg';
 import vernonPhoto from './assets/ade6d802-4db4-43c4-a4fc-a134516d5ef1.jpeg';

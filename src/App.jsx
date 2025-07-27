@@ -49,8 +49,8 @@ import {
   Stethoscope
 } from 'lucide-react';
 import './App.css';
- 
-// Import image resources
+
+// 導入圖片資源
 import vernonCard from './assets/28f8e080-f726-477b-9da7-2bfbe3904f70.jpeg';
 import vernonPhoto from './assets/ade6d802-4db4-43c4-a4fc-a134516d5ef1.jpeg';
 import moneyFinanceMagazine from './assets/money_finance_magazine.png';
@@ -59,7 +59,7 @@ import hkFinancial from './assets/hk_financial.jpg';
 import hkBusiness from './assets/hk_business.jpg';
 import hkDimsum from './assets/hk_dimsum.jpg';
 
-// Service item background images
+// 服務項目背景圖片
 import lifeInsuranceBg from './assets/life_insurance_planning.jpg';
 import medicalInsuranceBg from './assets/medical_insurance_consultation.jpg';
 import retirementPlanningBg from './assets/retirement_planning.jpg';
@@ -68,7 +68,7 @@ import educationFundBg from './assets/education_fund.jpg';
 import wealthInheritanceBg from './assets/wealth_inheritance.jpg';
 import familyOfficeBg from './assets/family_office.png';
 
-// AI cartoon portraits as decoration
+// AI 卡通肖像作為裝飾
 import aiVernonBusiness from './assets/vernon-business.jpg';
 import aiVernonSport from './assets/vernon-sport.png';
 import aiVernonMahjong from './assets/vernon-mahjong.png';
@@ -98,7 +98,6 @@ function App() {
     setSubmitStatus('');
 
     try {
-      // Method 1: Using Formspree (primary method)
       const formspreeResponse = await fetch('https://formspree.io/f/xdkogqjb', {
         method: 'POST',
         headers: {
@@ -123,7 +122,6 @@ function App() {
       console.log('Formspree failed, trying backup method...');
       
       try {
-        // Method 2: Using Netlify Forms (backup)
         const netlifyResponse = await fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -145,7 +143,6 @@ function App() {
       } catch (netlifyError) {
         console.log('Netlify failed, using mailto fallback...');
         
-        // Method 3: Mailto fallback
         const subject = encodeURIComponent('網站查詢 - ' + formData.name);
         const body = encodeURIComponent(`
 查詢內容: ${formData.message}
@@ -165,7 +162,6 @@ function App() {
     }
   };
 
-  // Service item data
   const services = [
     {
       icon: Shield,
@@ -213,7 +209,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-      {/* Navigation Bar */}
       <nav className="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -250,7 +245,6 @@ function App() {
             </button>
           </div>
 
-          {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-200">
               <div className="flex flex-col space-y-4">
@@ -266,12 +260,10 @@ function App() {
         </div>
       </nav>
 
-      {/* Main Banner */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
-        {/* AI Decoration Elements - Floating in Background */}
         <div className="absolute top-10 right-10 w-20 h-20 opacity-20 animate-bounce hidden lg:block">
           <img src={aiVernonSport} alt="" className="w-full h-full object-cover rounded-full" />
         </div>
@@ -293,62 +285,28 @@ function App() {
                   </span>
                 </h1>
                 
-                {/* Three Colored Boxes Inserted Here */}
-                <div className="space-y-8">
-                  {/* Manulife Regional Director */}
+                <div className="space-y-4">
                   <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-700" style={{backgroundColor: '#6B46C1'}}></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-700" style={{ backgroundColor: '#6B46C1' }}></div>
                     <div className="relative z-10 p-8 text-white">
-                      <div className="flex items-center mb-4">
-                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
-                          <Building className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold mb-1">宏利區域總監</h3>
-                          <p className="text-purple-100 text-sm">Manulife Regional Director</p>
-                        </div>
-                      </div>
-                      <p className="text-purple-50 leading-relaxed">
-                        帶領四個分區，領導<span className="font-bold text-yellow-300">150人</span>高效 VNITED 團隊，服務逾<span className="font-bold text-yellow-300">10,000名</span>客戶，續保率達<span className="font-bold text-yellow-300">90%</span>。
-                      </p>
+                      <h3 className="text-2xl font-bold mb-1">Manulife Regional Director</h3>
+                      <p className="text-purple-50 leading-relaxed text-sm truncate">Leads a team of 150+ professionals at VNITED, serving 10,000+ clients with a 90% satisfaction rate.</p>
                     </div>
                   </div>
 
-                  {/* Life Insurance Regulation and Development Focus Group Convener */}
-                  <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{animationDelay: '0.2s'}}>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700" style={{backgroundColor: '#4C51BF'}}></div>
+                  <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-800" style={{ backgroundColor: '#2D3748' }}></div>
                     <div className="relative z-10 p-8 text-white">
-                      <div className="flex items-center mb-4">
-                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
-                          <Scale className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold mb-1">壽險行業規管與發展關注組召集人</h3>
-                          <p className="text-blue-100 text-sm">Convener of Life Insurance Regulation and Development Focus Group</p>
-                        </div>
-                      </div>
-                      <p className="text-blue-50 leading-relaxed">
-                        協同各保險公司與政府保險監管局，制定前瞻性行業規範，推動壽險業透明與可持續發展。
-                      </p>
+                      <h3 className="text-2xl font-bold mb-1">Chairman of the GAMA Industry Development Standing Committee</h3>
+                      <p className="text-gray-50 leading-relaxed text-sm truncate">Guides strategic development as a prominent industry leader, influencing GAMA’s impact across 25 regions.</p>
                     </div>
                   </div>
 
-                  {/* GAMA Industry Development Standing Committee Chairman */}
-                  <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{animationDelay: '0.4s'}}>
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-800" style={{backgroundColor: '#2D3748'}}></div>
+                  <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700" style={{ backgroundColor: '#4C51BF' }}></div>
                     <div className="relative z-10 p-8 text-white">
-                      <div className="flex items-center mb-4">
-                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mr-4">
-                          <Globe className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold mb-1">GAMA 行業發展常務委員會主席</h3>
-                          <p className="text-gray-100 text-sm">Chairman of GAMA Industry Development Standing Committee</p>
-                        </div>
-                      </div>
-                      <p className="text-gray-50 leading-relaxed">
-                        作為前 GAMA 會長，Vernon 現任行業發展常務委員會主席，領導全球保險行業專業發展與標準提升，通過教育資源及國際網絡合作推動 GAMA 在<span className="font-bold text-yellow-300">25個各地分會</span>內的影響力。
-                      </p>
+                      <h3 className="text-2xl font-bold mb-1">Convener of the Life Insurance Industry Regulation and Development Concern Group</h3>
+                      <p className="text-blue-50 leading-relaxed text-sm truncate">Oversees regulatory advancements and industry development initiatives, shaping the future of life insurance.</p>
                     </div>
                   </div>
                 </div>
@@ -407,7 +365,6 @@ function App() {
         </div>
       </section>
 
-      {/* About Me */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -474,7 +431,6 @@ function App() {
         </div>
       </section>
 
-      {/* Core Values */}
       <section id="values" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -529,7 +485,6 @@ function App() {
         </div>
       </section>
 
-      {/* Services */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -550,7 +505,6 @@ function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {services.map((service, index) => (
               <Card key={index} className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden relative">
-                {/* Background Image */}
                 <div 
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                   style={{ backgroundImage: `url(${service.backgroundImage})` }}
@@ -558,7 +512,6 @@ function App() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
                 </div>
                 
-                {/* Content */}
                 <CardContent className="relative z-10 p-8 text-white">
                   <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 border border-white/30">
                     <service.icon className="w-8 h-8 text-white" />
@@ -572,10 +525,8 @@ function App() {
         </div>
       </section>
 
-      {/* Achievements and Honors - Redesigned */}
       <section id="achievements" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 to-orange-50">
         <div className="max-w-7xl mx-auto">
-          {/* Top Highlight Banner */}
           <div className="text-center mb-16">
             <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-md mb-4">
               <Trophy className="w-3 h-3 mr-1" />
@@ -588,7 +539,6 @@ function App() {
             </h2>
           </div>
 
-          {/* Professional Qualifications & Honors (Icon Card Grid) */}
           <div className="mb-16">
             <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">專業資質與榮譽</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -634,7 +584,6 @@ function App() {
             </div>
           </div>
 
-          {/* Soft Skills and Personal Charm */}
           <div className="mb-16">
             <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">軟實力與領導魅力</h3>
             <div className="grid md:grid-cols-3 gap-8">
@@ -684,7 +633,6 @@ function App() {
         </div>
       </section>
 
-      {/* Career Highlights */}
       <section id="career" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -700,7 +648,6 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Long-term Service and Promotion */}
             <Card className="shadow-xl border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
@@ -733,7 +680,6 @@ function App() {
               </CardContent>
             </Card>
 
-            {/* Industry Leadership Roles */}
             <Card className="shadow-xl border-0 bg-gradient-to-br from-amber-50 to-orange-50">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
@@ -804,7 +750,6 @@ function App() {
         </div>
       </section>
 
-      {/* Recruitment Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -889,7 +834,6 @@ function App() {
         </div>
       </section>
 
-      {/* Instagram Recommendation */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-2xl shadow-xl">
@@ -920,7 +864,6 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Us - Removed Service Hours */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -973,7 +916,6 @@ function App() {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Inquiry Content as the First Item */}
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       查詢內容 *

@@ -200,25 +200,31 @@ function App() {
                 <div className="space-y-4">
                   <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-700" style={{ backgroundColor: '#6B46C1' }}></div>
-                    <div className="relative z-10 p-8 text-white">
-                      <h3 className="text-2xl font-bold mb-1">宏利區域總監</h3>
-                      <p className="text-purple-50 leading-relaxed text-sm truncate break-words">帶領四個分區，領導150人高效 VNITED 團隊，服務逾10,000名客戶，續保率達90%。</p>
+                    <div className="relative z-10 p-4 sm:p-8 text-white">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-1">宏利區域總監</h3>
+                      <p className="text-purple-50 leading-relaxed text-sm sm:text-base break-words whitespace-pre-line">
+                        帶領四個分區，領導150人高效 VNITED 團隊，服務逾10,000名客戶，續保率達90%。
+                      </p>
                     </div>
                   </div>
 
                   <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-gray-800" style={{ backgroundColor: '#2D3748' }}></div>
-                    <div className="relative z-10 p-8 text-white">
-                      <h3 className="text-2xl font-bold mb-1">GAMA行業發展常務委員會主席</h3>
-                      <p className="text-gray-50 leading-relaxed text-sm truncate break-words">作為前 GAMA 會長，Vernon 現任行業發展常務委員會主席，領導全球保險行業專業發展與標準提升，通過教育資源及國際網絡合作推動 GAMA 在 25 個國家內的影響力。</p>
+                    <div className="relative z-10 p-4 sm:p-8 text-white">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-1">GAMA行業發展常務委員會主席</h3>
+                      <p className="text-gray-50 leading-relaxed text-sm sm:text-base break-words whitespace-pre-line">
+                        作為前 GAMA 會長，Vernon 現任行業發展常務委員會主席，領導全球保險行業專業發展與標準提升，通過教育資源及國際網絡合作推動 GAMA 在 25 個國家內的影響力。
+                      </p>
                     </div>
                   </div>
 
                   <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in" style={{ animationDelay: '0.4s' }}>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700" style={{ backgroundColor: '#4C51BF' }}></div>
-                    <div className="relative z-10 p-8 text-white">
-                      <h3 className="text-2xl font-bold mb-1">壽險行業規管與發展關注組召集人</h3>
-                      <p className="text-blue-50 leading-relaxed text-sm truncate break-words">協同各保險公司與政府保險監管局，制定前瞻性行業規範，推動壽險業透明與可持續發展。</p>
+                    <div className="relative z-10 p-4 sm:p-8 text-white">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-1">壽險行業規管與發展關注組召集人</h3>
+                      <p className="text-blue-50 leading-relaxed text-sm sm:text-base break-words whitespace-pre-line">
+                        協同各保險公司與政府保險監管局，制定前瞻性行業規範，推動壽險業透明與可持續發展。
+                      </p>
                     </div>
                   </div>
                 </div>

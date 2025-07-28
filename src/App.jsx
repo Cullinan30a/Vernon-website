@@ -784,7 +784,8 @@ function App() {
               <img 
                 src={aiVernonRecruit} 
                 alt="VNITED Team Recruitment" 
-                className="w-full rounded-2xl shadow-2xl"
+                className="w-full rounded-2xl shadow-2xl cursor-pointer"
+                onClick={() => window.open('https://youtube.com/shorts/qbZotO5_N2s', '_blank')}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent rounded-2xl"></div>
               <div className="absolute bottom-6 left-6 right-6">

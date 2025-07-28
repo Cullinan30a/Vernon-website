@@ -137,9 +137,12 @@ function App() {
 
   return (
     <div>
-      {/* 你的網頁內容 */}
+      <h1>Vernon Cheuk 網站</h1>
+      <p>歡迎來到 Vernon Cheuk 的官方網站！</p>
+      <img src={vernonPhoto} alt="Vernon Cheuk" style={{maxWidth: 300}} />
+      {/* 其他內容或組件 */}
     </div>
   )
 }
-
+a
 export default App

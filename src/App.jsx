@@ -348,6 +348,106 @@ function App() {
         </div>
       </section>
 
+      {/* 媒體報道 Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                香港經濟日報專訪
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600">
+              獲得香港經濟日報等權威媒體的深度報導和專業認可
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* 左邊 PDF 卡片 */}
+            <div className="bg-white rounded-2xl shadow-xl flex flex-col items-center p-8">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mb-4">
+                <BookOpen className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-blue-700 mb-1 text-center">經濟周刊 PDF</h3>
+              <div className="text-gray-500 text-sm mb-2">iMoney 風雲人物專訪</div>
+              <a
+                href="/assets/iMoney風雲人物專訪6Feb2021.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
+                <img
+                  src={moneyFinanceMagazine}
+                  alt="Money & Finance Magazine"
+                  className="rounded-xl shadow-md mb-4 w-full object-cover"
+                />
+              </a>
+              <a
+                href="/assets/iMoney風雲人物專訪6Feb2021.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg shadow hover:from-blue-600 hover:to-cyan-600 transition mb-2"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                下載專訪 PDF
+              </a>
+              <div className="text-gray-600 text-xs text-center">
+                2023年iMoney雜誌專訪，展現保險行業領袖的專業與貢獻。
+              </div>
+            </div>
+            {/* 中間 HKET 專訪卡片 */}
+            <div className="bg-white rounded-2xl shadow-xl flex flex-col justify-center items-center p-8">
+              <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center mb-4">
+                <ExternalLink className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-pink-700 mb-1 text-center">香港經濟日報專訪</h3>
+              <div className="text-gray-500 text-sm mb-4">保險風雲人物深度報導</div>
+              <div className="text-gray-700 text-base mb-6 text-center">
+                「卓君風 真誠卓志」<br />
+                詳細報導Vernon於保險業界的成就與理念，展現其從草根出身到成為區域總監的勵志故事。
+              </div>
+              <a
+                href="https://www.hket.com/article/3222616/%E5%8D%93%E5%90%9B%E9%A2%A8%20%E7%9C%9F%E8%AA%A0%E5%8D%93%E5%BF%97"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg shadow hover:from-pink-600 hover:to-purple-600 transition text-lg font-semibold"
+              >
+                <ExternalLink className="w-5 h-5 mr-2" />
+                閱讀完整專訪
+              </a>
+            </div>
+            {/* 右邊 YouTube 卡片 */}
+            <div className="bg-white rounded-2xl shadow-xl flex flex-col items-center p-8">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                <Play className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-red-600 mb-1 text-center">YouTube 保險風雲人物專訪</h3>
+              <div className="text-gray-500 text-sm mb-4">香港經濟日報採訪影片</div>
+              <a
+                href="https://www.youtube.com/watch?v=87ENL-d9DA0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 mb-2 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg shadow hover:from-red-600 hover:to-pink-600 transition"
+              >
+                <Play className="w-4 h-4 mr-2" />
+                觀看採訪特輯（第一集）
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=HzF4zLYvu_c"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 mb-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg shadow hover:from-red-600 hover:to-pink-600 transition"
+              >
+                <Play className="w-4 h-4 mr-2" />
+                觀看採訪特輯（第二集）
+              </a>
+              <div className="text-gray-600 text-xs text-center">
+                深度訪談內容涵蓋Vernon的職業發展歷程、管理理念和對保險業未來的展望。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Values Section */}
       <section id="values" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto">

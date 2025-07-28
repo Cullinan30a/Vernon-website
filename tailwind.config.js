@@ -28,7 +28,7 @@ module.exports = {
         accent: 'var(--accent)',
         'accent-foreground': 'var(--accent-foreground)',
         destructive: 'var(--destructive)',
-        border: 'var(--border)',
+        border: 'rgb(229 231 235)', // 這是 gray-200，可自訂
         input: 'var(--input)',
         ring: 'var(--ring)',
         'chart-1': 'var(--chart-1)',

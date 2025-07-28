@@ -75,11 +75,10 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-gray-200 outline-gray-300/50;
   }
   body {
     @apply bg-background text-foreground;
-    /* background-color: green; 這行如非必要可移除 */
   }
 }
 

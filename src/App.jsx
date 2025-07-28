@@ -744,7 +744,7 @@ function App() {
                 className="w-full rounded-2xl shadow-2xl cursor-pointer"
                 onClick={() => setShowRecruitVideo(true)}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent rounded-2xl pointer-events-none"></div>
               <div className="absolute bottom-6 left-6 right-6">
                 <Button 
                   size="lg" 

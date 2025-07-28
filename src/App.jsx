@@ -1065,7 +1065,7 @@ function App() {
         </div>
       </section>
 
-      <a href="/iMoney風雲人物專訪6Feb2021.pdf" target="_blank" rel="noopener noreferrer">
+      <a href={imoneyPdf} target="_blank" rel="noopener noreferrer">
         2023封面人物專訪
       </a>
     </div>

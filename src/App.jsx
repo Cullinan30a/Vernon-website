@@ -276,19 +276,7 @@ function App() {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  <Phone className="w-5 h-5 mr-2" />
-                  立即聯絡
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300"
-                  onClick={() => window.open('https://www.manulife.com.hk/zh-hk.html', '_blank')}
-                >
-                  <ExternalLink className="w-5 h-5 mr-2" />
-                  瀏覽宏利官方網站
-                </Button>
+                {/* 這裡已經沒有任何按鈕或連結，直接留空即可 */}
               </div>
 
               <div className="grid grid-cols-3 gap-6 pt-8">
@@ -792,7 +780,14 @@ function App() {
                 <Button 
                   size="lg" 
                   className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => {
+                    const el = document.getElementById('contact');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      window.location.hash = '#contact';
+                    }
+                  }}
                 >
                   <Users className="w-5 h-5 mr-2" />
                   立即申請加入
@@ -999,6 +994,10 @@ function App() {
           </div>
         </div>
       </section>
+
+      <a href="/iMoney風雲人物專訪6Feb2021.pdf" target="_blank" rel="noopener noreferrer">
+        2023封面人物專訪
+      </a>
     </div>
   );
 }

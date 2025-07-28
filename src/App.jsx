@@ -434,7 +434,7 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   <a
-                    href="/assets/iMoney風雲人物專訪6Feb2021.pdf"
+                    href="/src/assets/iMoney風雲人物專訪6Feb2021.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline text-blue-600"
@@ -444,7 +444,7 @@ function App() {
                 </h3>
                 <p className="text-gray-600 mb-6">
                   <a
-                    href="/assets/iMoney風雲人物專訪6Feb2021.pdf"
+                    href="/src/assets/iMoney風雲人物專訪6Feb2021.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline text-blue-600"
@@ -453,24 +453,24 @@ function App() {
                   </a>
                 </p>
                 <a
-                  href="/assets/iMoney風雲人物專訪6Feb2021.pdf"
+                  href="/src/assets/iMoney風雲人物專訪6Feb2021.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
                     src={moneyFinanceMagazine}
                     alt="Money & Finance Magazine Cover"
-                    className="w-full h-48 object-cover rounded-lg mb-4 hover:shadow-2xl transition"
+                    className="w-full h-48 object-cover rounded-lg mb-4 hover:shadow-2xl transition cursor-pointer"
                   />
                 </a>
                 <p className="text-gray-600 leading-relaxed">
                   <a
-                    href="/assets/iMoney風雲人物專訪6Feb2021.pdf"
+                    href="/src/assets/iMoney風雲人物專訪6Feb2021.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline text-blue-600"
                   >
-                    Vernon 獲 Money & Finance Magazine 選為2023年封面人物，表彰其在保險業界嘅傑出貢獻同領導力。
+                    Vernon 獲 Money & Finance Magazine 選為2023年封面人物，表彰其在保險業界的傑出貢獻同領導力。
                   </a>
                 </p>
               </CardContent>
@@ -889,23 +889,18 @@ function App() {
             </div>
 
             <div className="relative">
-              <img 
-                src={aiVernonRecruit} 
-                alt="VNITED Team Recruitment" 
-                className="w-full rounded-2xl shadow-2xl cursor-pointer object-cover"
-                onClick={() => setShowRecruitVideo(true)}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent rounded-2xl"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <Button 
-                  size="lg" 
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-                >
-                  <Users className="w-5 h-5 mr-2" />
-                  立即申請加入
-                </Button>
-              </div>
+              <a
+                href="https://youtube.com/shorts/qbZotO5_N2s?feature=share"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src={aiVernonRecruit} 
+                  alt="VNITED Team Recruitment" 
+                  className="w-full rounded-2xl shadow-2xl cursor-pointer object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent rounded-2xl"></div>
+              </a>
               {/* YouTube 影片彈窗 */}
               {showRecruitVideo && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
@@ -933,6 +928,17 @@ function App() {
                   </div>
                 </div>
               )}
+              {/* Button 移到圖片下方 */}
+              <div className="mt-6">
+                <Button 
+                  size="lg" 
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+                >
+                  <Users className="w-5 h-5 mr-2" />
+                  立即申請加入
+                </Button>
+              </div>
             </div>
           </div>
         </div>

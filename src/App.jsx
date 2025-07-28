@@ -36,6 +36,7 @@ import aiVernonBusiness from './assets/vernon-business.jpg';
 import aiVernonSport from './assets/vernon-sport.png';
 import aiVernonMahjong from './assets/vernon-mahjong.png';
 import aiVernonRecruit from './assets/vernon-recruit.png';
+import imoneyPdf from './assets/iMoney風雲人物專訪6Feb2021.pdf';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -370,7 +371,7 @@ function App() {
               <h3 className="text-xl font-bold text-blue-700 mb-1 text-center">經濟周刊 PDF</h3>
               <div className="text-gray-500 text-sm mb-2">iMoney 風雲人物專訪</div>
               <a
-                href="/assets/iMoney風雲人物專訪6Feb2021.pdf"
+                href={imoneyPdf}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full"
@@ -382,7 +383,7 @@ function App() {
                 />
               </a>
               <a
-                href="/assets/iMoney風雲人物專訪6Feb2021.pdf"
+                href={imoneyPdf}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg shadow hover:from-blue-600 hover:to-cyan-600 transition mb-2"

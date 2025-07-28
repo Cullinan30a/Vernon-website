@@ -137,10 +137,29 @@ function App() {
 
   return (
     <div>
-      <h1>Vernon Cheuk 網站</h1>
-      <p>歡迎來到 Vernon Cheuk 的官方網站！</p>
-      <img src={vernonPhoto} alt="Vernon Cheuk" style={{maxWidth: 300}} />
-      {/* 其他內容或組件 */}
+      {/* Hero Section */}
+      <section>
+        <h1>Vernon Cheuk 網站</h1>
+        <p>歡迎來到 Vernon Cheuk 的官方網站！</p>
+        <img src={vernonPhoto} alt="Vernon Cheuk" style={{maxWidth: 300}} />
+      </section>
+
+      {/* 關於我 Section */}
+      <section>
+        {/* 你的關於我內容 */}
+      </section>
+
+      {/* 服務項目 Section */}
+      <section>
+        {/* 你的服務項目內容 */}
+      </section>
+
+      {/* 聯絡表單 Section */}
+      <section>
+        {/* 你的聯絡表單內容 */}
+      </section>
+
+      {/* 其他 Section ... */}
     </div>
   )
 }

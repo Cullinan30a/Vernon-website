@@ -419,3 +419,588 @@ function App() {
               </CardContent>
             </Card>
 
+            <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">客戶為先</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  以客戶利益為依歸，了解其財務狀況和實質需求，推介最合適的方案
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md mb-4">
+              <Shield className="w-3 h-3 mr-1" />
+              服務項目
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                專業保險服務
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              提供全方位的保險及理財規劃服務，為您和家人的未來保駕護航
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {services.map((service, index) => (
+              <Card key={index} className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden relative">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: `url(${service.backgroundImage})` }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
+                </div>
+                
+                <CardContent className="relative z-10 p-8 text-white">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 border border-white/30">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4 drop-shadow-lg">{service.title}</h3>
+                  <p className="text-white/90 leading-relaxed drop-shadow-md">{service.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section id="achievements" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-md mb-4">
+              <Trophy className="w-3 h-3 mr-1" />
+              專業里程碑與行業領導力
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-8">
+              <span className="bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">
+                35年來在保險業界獲得的專業認可和領導地位
+              </span>
+            </h2>
+          </div>
+
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">專業資質與榮譽</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Building className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">宏利區域總監</h4>
+                  <p className="text-sm text-gray-600">領導地位認證</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Trophy className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">MDRT 終身會員</h4>
+                  <p className="text-sm text-gray-600">百萬圓桌會</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">IDA、IQA、DMA</h4>
+                  <p className="text-sm text-gray-600">國際專業認證</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-br from-green-50 to-green-100 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Star className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">GAMA 管理類大獎</h4>
+                  <p className="text-sm text-gray-600">MAA / FLA / IMA</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">軟實力與領導魅力</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">專業專注</h4>
+                  <div className="space-y-2 text-gray-600">
+                    <div>• 銷售細節掌控</div>
+                    <div>• 客戶心理學</div>
+                    <div>• 團隊管理智慧</div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Heart className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">生活品味</h4>
+                  <div className="space-y-2 text-gray-600">
+                    <div>• 健身愛好者</div>
+                    <div>• 生活品味實踐家</div>
+                    <div>• 工作生活平衡</div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">團隊領導</h4>
+                  <div className="space-y-2 text-gray-600">
+                    <div>• 150人團隊管理</div>
+                    <div>• 人才培養專家</div>
+                    <div>• 重情重義文化</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Career Section */}
+      <section id="career" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white border-0 shadow-md mb-4">
+              <Star className="w-3 h-3 mr-1" />
+              職業亮點
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                職業亮點
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              展示在宏利保險的長期服務與晉升歷程，以及在保險行業的領導角色與貢獻
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            <Card className="shadow-xl border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold text-gray-900 flex items-center">
+                  <TrendingUp className="w-8 h-8 mr-3 text-blue-600" />
+                  長期服務與晉升
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-blue-700">1991年</div>
+                    <div className="text-gray-600">加入宏利，開啟其保險行業的職業生涯。</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-purple-700">2015年</div>
+                    <div className="text-gray-600">晉升為<strong>高級分區總監（SDD）</strong>，彰顯其領導才能與專業知識。</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-green-700">2018年</div>
+                    <div className="text-gray-600">進一步晉升為<strong>區域總監（RD）</strong>，展現其在宏利內部的穩步發展與影響力。</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-xl border-0 bg-gradient-to-br from-amber-50 to-orange-50">
+              <CardHeader>
+                <CardTitle className="text-3xl font-bold text-gray-900 flex items-center">
+                  <Trophy className="w-8 h-8 mr-3 text-amber-600" />
+                  行業領導角色
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-red-700">2025-2026年</div>
+                    <div className="text-gray-600">擔任<strong>壽險行業規管與發展關注組召集人</strong>，在行業政策與發展方向上發揮重要作用。</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-blue-700">2021-2025年</div>
+                    <div className="text-gray-600">連續擔任<strong>香港人壽保險經理協會（GAMAHK）行業發展常務委員會主席</strong>，體現對行業發展的長期承諾。</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-yellow-700">2019年及2020年</div>
+                    <div className="text-gray-600">擔任<strong>GAMAHK會長</strong>，領導香港壽險經理協會。</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-purple-700">2024年</div>
+                    <div className="text-gray-600">擔任<strong>GAMA LAMPASIA籌委會主席</strong>，負責領導重要的行業領袖高峰會及榮譽獎項頒獎禮。</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-green-700">2023年</div>
+                    <div className="text-gray-600">成為<strong>GAMAHK慈善基金委員</strong>，參與社會責任項目。</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-indigo-700">2021-2022年</div>
+                    <div className="text-gray-600">擔任<strong>宏利理財策劃協會（AFP）主席</strong>，推動內部領導計劃。</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-pink-700">2012、2016、2017、2020、2022年</div>
+                    <div className="text-gray-600">多次擔任<strong>宏利圓桌會行政委員會（RTC）主席</strong>，展現其在公司內部的持續影響力。</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-3 h-3 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div className="font-semibold text-teal-700">2019年</div>
+                    <div className="text-gray-600">擔任<strong>亞太壽險大會製作總監</strong>，參與國際級行業盛事。</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* JoinUs Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0 shadow-md mb-4">
+              <Users className="w-3 h-3 mr-1" />
+              加入我們
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                VNITED團隊招聘
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              加入我們超過150人的專業團隊，在重情重義的環境中發展您的保險事業
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-gray-900">為什麼選擇VNITED？</h3>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md">
+                    <CheckCircle className="w-6 h-6 text-green-600 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-gray-900">完善培訓制度</h4>
+                      <p className="text-gray-600">10年間培訓出4名分區總監的成功經驗</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md">
+                    <CheckCircle className="w-6 h-6 text-green-600 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-gray-900">重情重義文化</h4>
+                      <p className="text-gray-600">關心團隊成員的事業和人生發展</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md">
+                    <CheckCircle className="w-6 h-6 text-green-600 mt-1" />
+                    <div>
+                      <h4 className="font-semibold text-gray-900">多元發展機會</h4>
+                      <p className="text-gray-600">從顧問到區域總監的完整晉升階梯</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl">
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">招聘職位</h4>
+                <div className="space-y-2 text-gray-700">
+                  <div>• 保險顧問</div>
+                  <div>• 高級顧問</div>
+                  <div>• 經理</div>
+                  <div>• 高級經理</div>
+                  <div>• 分區總監</div>
+                  <div>• 區域總監</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <img 
+                src={aiVernonRecruit} 
+                alt="VNITED Team Recruitment" 
+                className="w-full rounded-2xl shadow-2xl cursor-pointer"
+                onClick={() => setShowRecruitVideo(true)}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent rounded-2xl"></div>
+              <div className="absolute bottom-6 left-6 right-6">
+                <Button 
+                  size="lg" 
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => {
+                    const el = document.getElementById('contact');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      window.location.hash = '#contact';
+                    }
+                  }}
+                >
+                  <Users className="w-5 h-5 mr-2" />
+                  立即申請加入
+                </Button>
+              </div>
+              {/* YouTube 影片彈窗 */}
+              {showRecruitVideo && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+                  <div className="relative w-full max-w-xl aspect-video">
+                    <iframe
+                      src="https://www.youtube.com/embed/qbZotO5_N2s"
+                      title="VNITED Team Recruitment"
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                      className="w-full h-full rounded-xl shadow-2xl border-4 border-white"
+                    />
+                    <button
+                      className="absolute -top-4 -right-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-200 transition"
+                      onClick={() => setShowRecruitVideo(false)}
+                      aria-label="關閉影片"
+                    >
+                      <X className="w-6 h-6 text-gray-700" />
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Instagram Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-2xl shadow-xl">
+            <div className="flex items-center justify-center space-x-4 mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
+                <Instagram className="w-8 h-8 text-white" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900">Instagram專業帳戶</h3>
+                <p className="text-gray-600">@vernon_cheuk</p>
+              </div>
+            </div>
+            
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <strong className="text-purple-600">強烈推薦關注</strong> Vernon的Instagram專業帳戶，
+              獲取最新的保險知識、市場分析和專業見解。
+            </p>
+            
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => window.open('https://www.instagram.com/vernon_cheuk/', '_blank')}
+            >
+              <Instagram className="w-5 h-5 mr-2" />
+              關注 @vernon_cheuk
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 shadow-md mb-4">
+              <Mail className="w-3 h-3 mr-1" />
+              聯絡我們
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                預約諮詢
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600">
+              歡迎聯絡我們，讓我為您提供專業的保險規劃建議
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <Phone className="w-5 h-5 mr-2 text-blue-600" />
+                  聯絡資訊
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <Mail className="w-5 h-5 text-green-600" />
+                    <div>
+                      <div className="font-semibold text-green-700">主要聯絡</div>
+                      <div className="text-green-600">vernoncheuk@gmail.com</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Award className="w-5 h-5 text-purple-600" />
+                    <div>
+                      <div className="font-semibold text-gray-900">專業牌照</div>
+                      <div className="text-gray-600">IM8724 • 強積金中介人016087</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <Card className="shadow-xl border-0 bg-gradient-to-br from-white to-blue-50">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-gray-900">發送查詢</CardTitle>
+                <CardDescription>
+                  請填寫以下表格，我會盡快回覆您的查詢
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      查詢內容 *
+                    </label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows={4}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                      placeholder="請詳細描述您的查詢內容..."
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        姓名 *
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        placeholder="請輸入您的姓名"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        電話 *
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        placeholder="請輸入您的電話"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      電郵 *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      placeholder="請輸入您的電郵地址"
+                    />
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 py-3"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
+                        發送中...
+                      </>
+                    ) : (
+                      <>
+                        <Mail className="w-4 h-4 mr-2" />
+                        提交查詢
+                      </>
+                    )}
+                  </Button>
+
+                  {submitStatus === 'success' && (
+                    <p className="text-green-600 text-center">提交成功！我們將盡快與您聯絡。</p>
+                  )}
+                  {submitStatus === 'mailto' && (
+                    <p className="text-yellow-600 text-center">提交失敗，已啟用郵件備用方式，請檢查您的郵件客戶端。</p>
+                  )}
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <a href="/iMoney風雲人物專訪6Feb2021.pdf" target="_blank" rel="noopener noreferrer">
+        2023封面人物專訪
+      </a>
+    </div>
+  );
+}
+
+export default App;
+

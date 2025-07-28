@@ -3,6 +3,7 @@ module.exports = {
   darkMode: 'class', // Enables class-based dark mode
   content: [
     './src/**/*.{js,jsx,ts,tsx}', // Scans these files to generate Tailwind styles
+    './src/**/*.css', // <--- Added this line
   ],
   theme: {
     extend: {
@@ -61,4 +62,7 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    'border-border',
+  ],
 };

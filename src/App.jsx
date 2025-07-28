@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from './components/ui/button.jsx';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './components/ui/card.jsx';
@@ -784,11 +783,11 @@ function App() {
               <img 
                 src={aiVernonRecruit} 
                 alt="VNITED Team Recruitment" 
-                className="w-full rounded-2xl shadow-2xl cursor-pointer"
-                onClick={() => window.open('https://youtube.com/shorts/qbZotO5_N2s', '_blank')}
+                className="w-full rounded-2xl shadow-2xl cursor-pointer z-10"
+                onClick={() => window.open('https://www.youtube.com/watch?v=qbZotO5_N2s', '_blank')}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent rounded-2xl"></div>
-              <div className="absolute bottom-6 left-6 right-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent rounded-2xl pointer-events-none"></div>
+              <div className="absolute bottom-6 left-6 right-6 z-20">
                 <Button 
                   size="lg" 
                   className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
@@ -983,4 +982,3 @@ function App() {
 }
 
 export default App;
-

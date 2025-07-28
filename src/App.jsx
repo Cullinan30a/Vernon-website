@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from './components/ui/button.jsx';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './components/ui/card.jsx';
@@ -165,6 +166,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Navigation Section */}
       <nav className="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -216,6 +218,7 @@ function App() {
         </div>
       </nav>
 
+      {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
@@ -321,6 +324,7 @@ function App() {
         </div>
       </section>
 
+      {/* About Section */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -387,6 +391,7 @@ function App() {
         </div>
       </section>
 
+      {/* Values Section */}
       <section id="values" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -441,6 +446,7 @@ function App() {
         </div>
       </section>
 
+      {/* Services Section */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -481,6 +487,7 @@ function App() {
         </div>
       </section>
 
+      {/* Achievements Section */}
       <section id="achievements" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 to-orange-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -589,6 +596,7 @@ function App() {
         </div>
       </section>
 
+      {/* Career Section */}
       <section id="career" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -709,6 +717,7 @@ function App() {
         </div>
       </section>
 
+      {/* JoinUs Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -793,6 +802,7 @@ function App() {
         </div>
       </section>
 
+      {/* Instagram Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-2xl shadow-xl">
@@ -823,6 +833,7 @@ function App() {
         </div>
       </section>
 
+      {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -832,4 +843,143 @@ function App() {
             </Badge>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                預約
+                預約諮詢
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600">
+              歡迎聯絡我們，讓我為您提供專業的保險規劃建議
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <Phone className="w-5 h-5 mr-2 text-blue-600" />
+                  聯絡資訊
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <Mail className="w-5 h-5 text-green-600" />
+                    <div>
+                      <div className="font-semibold text-green-700">主要聯絡</div>
+                      <div className="text-green-600">vernoncheuk@gmail.com</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Award className="w-5 h-5 text-purple-600" />
+                    <div>
+                      <div className="font-semibold text-gray-900">專業牌照</div>
+                      <div className="text-gray-600">IM8724 • 強積金中介人016087</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <Card className="shadow-xl border-0 bg-gradient-to-br from-white to-blue-50">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-gray-900">發送查詢</CardTitle>
+                <CardDescription>
+                  請填寫以下表格，我會盡快回覆您的查詢
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      查詢內容 *
+                    </label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows={4}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                      placeholder="請詳細描述您的查詢內容..."
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        姓名 *
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        placeholder="請輸入您的姓名"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        電話 *
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        placeholder="請輸入您的電話"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      電郵 *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      placeholder="請輸入您的電郵地址"
+                    />
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 py-3"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
+                        發送中...
+                      </>
+                    ) : (
+                      <>
+                        <Mail className="w-4 h-4 mr-2" />
+                        提交查詢
+                      </>
+                    )}
+                  </Button>
+
+                  {submitStatus === 'success' && (
+                    <p className="text-green-600 text-center">提交成功！我們將盡快與您聯絡。</p>
+                  )}
+                  {submitStatus === 'mailto' && (
+                    <p className="text-yellow-600 text-center">提交失敗，已啟用郵件備用方式，請檢查您的郵件客戶端。</p>
+                  )}
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default App;
+

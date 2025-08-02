@@ -30,8 +30,7 @@ import mpfServicesBg from './assets/mpf_services.jpg';
 import educationFundBg from './assets/education_fund.jpg';
 import wealthInheritanceBg from './assets/wealth_inheritance.jpg';
 import familyOfficeBg from './assets/family_office.png';
-
-// AI 卡通肖像i
+// AI卡通肖像i
   
 mport aiVernonBusiness from './assets/vernon-business.jpg';
 import aiVernonSport from './assets/vernon-sport.png';

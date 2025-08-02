@@ -32,7 +32,9 @@ import wealthInheritanceBg from './assets/wealth_inheritance.jpg';
 import familyOfficeBg from './assets/family_office.png';
 
 // AI 卡通肖像
-import aiVernonBusiness from './assets/vernon-business.jpg';
+i
+  
+mport aiVernonBusiness from './assets/vernon-business.jpg';
 import aiVernonSport from './assets/vernon-sport.png';
 import aiVernonMahjong from './assets/vernon-mahjong.png';
 import aiVernonRecruit from './assets/vernon-recruit.png';
@@ -60,6 +62,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
     setSubmitStatus('');
 
     try {
@@ -131,6 +134,7 @@ function App() {
       icon: Heart,
       title: "醫療保險諮詢", 
       description: "專業醫療保險建議，保障您的健康與財富",
+      
       backgroundImage: medicalInsuranceBg
     },
     {
@@ -166,6 +170,7 @@ function App() {
   ];
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Navigation Section */}
       <nav className="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-200">

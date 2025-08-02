@@ -104,6 +104,7 @@ function App() {
           setSubmitStatus('success');
   
           setFormData({ message: '', name: '', phone: '', email: '' });
+       
         } else {
           throw new Error('Netlify failed');
         }
@@ -139,7 +140,8 @@ function App() {
       description: "專業醫療保險建議，保障您的健康與財富",
 
       
-      backgroundImage: medicalInsuranceBg
+      bac
+        kgroundImage: medicalInsuranceBg
     },
     {
       icon: TrendingUp,

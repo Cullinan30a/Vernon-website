@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { Button } from './components/ui/button.jsx';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './components/ui/card.jsx';
 import { Badge } from './components/ui/badge.jsx';
@@ -99,6 +100,7 @@ function App() {
 
         if (netlifyResponse.ok) {
           setSubmitStatus('success');
+  
           setFormData({ message: '', name: '', phone: '', email: '' });
         } else {
           throw new Error('Netlify failed');
@@ -133,6 +135,7 @@ function App() {
       icon: Heart,
       title: "醫療保險諮詢", 
       description: "專業醫療保險建議，保障您的健康與財富",
+
       
       backgroundImage: medicalInsuranceBg
     },
@@ -168,6 +171,7 @@ function App() {
     }
   ];
 
+
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -202,6 +206,7 @@ function App() {
 
             <button 
               className="md:hidden"
+   
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -235,6 +240,7 @@ function App() {
                 <br />
                 <span className="text-xl sm:text-2xl lg:text-4xl text-gray-700">
                   Vernon Cheuk
+               
                 </span>
               </h1>
               

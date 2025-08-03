@@ -1064,10 +1064,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      <a href={imoneyPdf} target="_blank" rel="noopener noreferrer">
-        2023封面人物專訪
-      </a>
     </div>
   );
 }

@@ -4,3 +4,7 @@ compatibility_date = "2025-07-23"
 [assets]
 directory = "./dist"
 
+[[routes]]
+pattern = "vnitedhk.com/*"
+zone_name = "vnitedhk.com"
+

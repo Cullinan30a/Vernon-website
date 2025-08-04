@@ -8,3 +8,7 @@ directory = "./dist"
 pattern = "vnitedhk.com/*"
 zone_name = "vnitedhk.com"
 
+[[routes]]
+pattern = "www.vnitedhk.com/*"
+zone_name = "vnitedhk.com"
+

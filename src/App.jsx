@@ -178,11 +178,11 @@ function App() {
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                   <Sparkles className="w-3 h-3 mr-1" />
-                  v5.9
+                  v6.0
                 </Badge>
                 <Badge variant="outline" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-md">
                   <Calendar className="w-3 h-3 mr-1" />
-                  2025.07.23
+                  2025.08.05
                 </Badge>
               </div>
             </div>
@@ -218,6 +218,34 @@ function App() {
           )}
         </div>
       </nav>
+
+      {/* Dynamic Banner */}
+      <section className="bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 text-white py-3 px-4 animate-pulse">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-center space-x-3">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-white rounded-full animate-bounce"></div>
+              <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+              <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            </div>
+            <a
+              href="https://youtube.com/shorts/-taAnlA7mSQ?feature=share"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 hover:text-yellow-200 transition-colors cursor-pointer"
+            >
+              <Play className="w-4 h-4" />
+              <span className="font-semibold text-sm sm:text-base">🔥 聚焦香港保險新局 🔥</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: '0.3s' }}></div>
+              <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+              <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Hero Section */}
       <section className="relative py-10 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -391,9 +419,6 @@ function App() {
                 <Download className="w-4 h-4 mr-2" />
                 下載專訪 PDF
               </a>
-              <div className="text-gray-600 text-xs text-center">
-                2023年iMoney雜誌專訪，展現保險行業領袖的專業與貢獻。
-              </div>
             </div>
             {/* 中間 HKET 專訪卡片 */}
             <div className="bg-white rounded-2xl shadow-xl flex flex-col justify-center items-center p-8">
@@ -868,7 +893,7 @@ function App() {
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
                   <div className="relative w-full max-w-xl aspect-video">
                     <iframe
-                      src="https://www.youtube.com/embed/qbZotO5_N2s"
+                      src="https://www.youtube.com/embed/qbZotO5_N2s?autoplay=1"
                       title="VNITED Team Recruitment"
                       allow="autoplay; encrypted-media"
                       allowFullScreen

@@ -11,4 +11,22 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    cssCodeSplit: true,
+    minify: 'esbuild',
+    cssMinify: false,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.')
+          const ext = info[info.length - 1]
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return `assets/styles-[hash][extname]`
+          }
+          return `assets/[name]-[hash][extname]`
+        }
+      }
+    }
+  }
 })

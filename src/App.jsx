@@ -1,4 +1,6 @@
 import { useState } from 'react';
+
+
 import { Button } from './components/ui/button.jsx';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './components/ui/card.jsx';
 import { Badge } from './components/ui/badge.jsx';
@@ -30,9 +32,9 @@ import mpfServicesBg from './assets/mpf_services.jpg';
 import educationFundBg from './assets/education_fund.jpg';
 import wealthInheritanceBg from './assets/wealth_inheritance.jpg';
 import familyOfficeBg from './assets/family_office.png';
-
-// AI 卡通肖像
-import aiVernonBusiness from './assets/vernon-business.jpg';
+// AI卡通肖像
+  
+mport aiVernonBusiness from './assets/vernon-business.jpg';
 import aiVernonSport from './assets/vernon-sport.png';
 import aiVernonMahjong from './assets/vernon-mahjong.png';
 import aiVernonRecruit from './assets/vernon-recruit.png';
@@ -60,17 +62,20 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
     setSubmitStatus('');
 
     try {
       const formspreeResponse = await fetch('https://formspree.io/f/xdkogqjb', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        
         body: JSON.stringify({
           name: formData.name,
           phone: formData.phone,
           email: formData.email,
           message: formData.message,
+          
           source: 'Vernon Cheuk 網站查詢'
         })
       });
@@ -97,7 +102,9 @@ function App() {
 
         if (netlifyResponse.ok) {
           setSubmitStatus('success');
+  
           setFormData({ message: '', name: '', phone: '', email: '' });
+       
         } else {
           throw new Error('Netlify failed');
         }
@@ -131,7 +138,10 @@ function App() {
       icon: Heart,
       title: "醫療保險諮詢", 
       description: "專業醫療保險建議，保障您的健康與財富",
-      backgroundImage: medicalInsuranceBg
+
+      
+      bac
+        kgroundImage: medicalInsuranceBg
     },
     {
       icon: TrendingUp,
@@ -165,7 +175,9 @@ function App() {
     }
   ];
 
+
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Navigation Section */}
       <nav className="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-200">
@@ -198,6 +210,7 @@ function App() {
 
             <button 
               className="md:hidden"
+   
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -259,6 +272,7 @@ function App() {
                 <br />
                 <span className="text-xl sm:text-2xl lg:text-4xl text-gray-700">
                   Vernon Cheuk
+               
                 </span>
               </h1>
               

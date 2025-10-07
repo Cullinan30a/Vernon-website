@@ -1,14 +1,22 @@
 {
   "name": "vernon-cheuk-website",
   "private": true,
+<<<<<<< HEAD
   "version": "6.0.0",
+=======
+  "version": "0.0.0",
+>>>>>>> c1b5e48 (Add ManuLink 宏利通 subpage and button to main site)
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+<<<<<<< HEAD
     "preview": "vite preview",
     "deploy": "npm run build && npx wrangler deploy --assets=./dist"
+=======
+    "preview": "vite preview"
+>>>>>>> c1b5e48 (Add ManuLink 宏利通 subpage and button to main site)
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -57,6 +65,10 @@
     "recharts": "^2.15.3",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.3.0",
+<<<<<<< HEAD
+=======
+    "tailwindcss": "^4.1.7",
+>>>>>>> c1b5e48 (Add ManuLink 宏利通 subpage and button to main site)
     "vaul": "^1.1.2",
     "zod": "^3.24.4"
   },
@@ -65,13 +77,19 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
+<<<<<<< HEAD
     "autoprefixer": "^10.4.21",
+=======
+>>>>>>> c1b5e48 (Add ManuLink 宏利通 subpage and button to main site)
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+<<<<<<< HEAD
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11",
+=======
+>>>>>>> c1b5e48 (Add ManuLink 宏利通 subpage and button to main site)
     "tw-animate-css": "^1.2.9",
     "vite": "^6.3.5"
   },

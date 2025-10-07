@@ -11,6 +11,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+<<<<<<< HEAD
   build: {
     cssCodeSplit: true,
     minify: 'esbuild',
@@ -29,4 +30,6 @@ export default defineConfig({
       }
     }
   }
+=======
+>>>>>>> c1b5e48 (Add ManuLink 宏利通 subpage and button to main site)
 })

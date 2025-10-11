@@ -178,11 +178,15 @@ function App() {
               <div className="flex items-center space-x-2">
                 <Badge variant="outline" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                   <Sparkles className="w-3 h-3 mr-1" />
-                  v6.0
+                  v6.0.2
                 </Badge>
                 <Badge variant="outline" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 shadow-md">
                   <Calendar className="w-3 h-3 mr-1" />
-                  2025.08.05
+                  2025.10.12 00:15 GMT+8
+                </Badge>
+                <Badge variant="outline" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0 shadow-md">
+                  <Info className="w-3 h-3 mr-1" />
+                  WeChat 導流改指向 www 子網域，避免 403
                 </Badge>
               </div>
             </div>
